@@ -1,0 +1,29 @@
+header {
+    background-color: burlywood;
+    padding: 5px;
+}
+
+#right-links {
+    background-color: lightcyan;
+}
+
+#home {
+    background-color: antiquewhite;
+}
+
+#main-content {
+    border: 2px solid green;
+}
+
+footer {
+    background-color: beige;
+    
+}
+
+.img-caption {
+    background-color: aquamarine;
+}
+
+.animal-tiles {
+    width: 190px;
+}
