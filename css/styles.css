@@ -1,11 +1,28 @@
 header {
     background-color: burlywood;
     padding: 5px;
+    display: flex;
 }
 
-#right-links {
-    background-color: lightcyan;
+.navbar-collapse {
+    justify-content: center;
 }
+
+description-image {
+    width: 100%;
+}
+
+ description-image img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.cta-container {
+    text-align: center;
+}
+
 
 #home {
     background-color: antiquewhite;
@@ -24,6 +41,14 @@ footer {
     background-color: aquamarine;
 }
 
-.animal-tiles {
-    width: 190px;
+.animal-tile {
+    width: 100%
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: azure;
 }
