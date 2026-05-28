@@ -1,3 +1,43 @@
+/*import google fonts for use*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
+/*generic styles*/
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F1C40F;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+body,
+.navbar-brand {
+    /*apply font to the body and the navbar brand link*/
+    font-family: "caveat", sans-serif;
+    font-size: 37px;
+}
+
+.card {
+    background-color: #B8E1FF;
+    border: 2px solid #6CB4EE;
+}
+
+.card .card-body h3 {
+    font-family: "caveat", sans-serif;
+    font-size: 27px;
+}
+
+.card .card-body .btn-info {
+    font-family: "caveat", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 header {
     background-color: burlywood;
     padding: 5px;
@@ -8,47 +48,108 @@ header {
     justify-content: center;
 }
 
-description-image {
-    width: 100%;
-}
-
- description-image img{
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: auto;
+.call-to-action {
+    font-size: 27px;
 }
 
 .cta-container {
+    /*position button in the center of the section*/
     text-align: center;
-}
-
-
-#home {
-    background-color: antiquewhite;
-}
-
-#main-content {
-    border: 2px solid green;
 }
 
 footer {
     background-color: beige;
-    
+
+}
+
+.main-content {
+    /*apply margin with this class only to section in home page*/
+    margin: 130px 0;
+}
+
+/*bootstrap grid*/
+.card {
+    width: 100%;
+}
+
+.col-md-6 .card {
+    min-height: 130px;
+    max-height: 250px;
+    /*adjust height accordingly to screen breakpoint*/
+}
+
+.card-img-top {
+    max-height: 240px;
+    min-height: 90px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
 }
 
 .img-caption {
     background-color: aquamarine;
 }
 
-.animal-tile {
-    width: 100%
-}
-
 #footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 80px;
-    background-color: azure;
+    height: 90px;
+    background-color: #B8F2E6;
+    display: flex;
+}
+
+.footer-links {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+
+}
+
+.footer-links {
+    justify-content: flex-start;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.footer-links:hover {
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.play-sound {
+    margin-left: 30px;
+}
+
+.card-img-top {
+    object-fit: fill;
+}
+
+button[type=submit] {
+    font-size: 30px;
+}
+
+.col-6 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*media query to fix layout issues*/
+@media screen and (min-height:992px) {
+    .card .card-img-top {
+        min-height: 174px;
+    }
+
+    /*fix section overflowing over the navbar in mobile screen size*/
+    #main {
+        z-index: 0;
+    }
+    .navbar {
+        z-index: 4;
+    }
 }
