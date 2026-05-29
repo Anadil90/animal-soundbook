@@ -33,6 +33,57 @@ Issue has been fixed by placing a media query at the 992px breakpoint and applyi
 
 ## Manual testing
 
-Upon first viewing the interactive soundbook page of the website, it has been found that the main section pops up above the header, which is a spacing issue. Applying margin to the top  of the section solved the issue. 
+- Upon first viewing the interactive soundbook page of the website, it has been found that the main section pops up above the header, which is a spacing issue. Applying margin to the top  of the section solved the issue. 
 
+- On mobile screen sizes of 320px, it has been found that the navbar simply overflows to the top of it. 
 The problem was solved by applying a z-index value of 0 on the section in the page with the animal tile grid, and a z-index value of 4 on the navbar. 
+
+## How to view the project
+
+Simply go to the link below to see the delpoyed site:
+[Animal Soundbook] (https://anadil90.github.io/animal-soundbook/index.html)
+
+## User stories:
+
+![user story 1](./user%20stories/Screenshot%20from%202026-05-29%2001-20-33.png)
+
+![user story 2](./user%20stories/Screenshot%20from%202026-05-29%2001-23-05.png)
+
+![user story 3](./user%20stories/Screenshot%20from%202026-05-29%2001-24-52.png)
+This user story was a could have, but could not be implemented due to the scope of the project. This is better suited for javascript, where interactivity is key. A workaround to that would have involved more time, particularly in sourcing actual proper sound files in the form of wavs.
+
+![user story 4](./user%20stories/Screenshot%20from%202026-05-29%2003-28-51.png)
+
+
+## Automatic testing
+
+HTML validation: 
+
+testing the pages showed that they were mostly clean, except for warning messages on the contact and signup pages.
+
+### home page
+![home page test](./testing/Screenshot%20from%202026-05-29%2003-12-44.png)
+
+![about page test](./testing/Screenshot%20from%202026-05-29%2003-13-44.png)
+
+![contact page test](./testing/Screenshot%20from%202026-05-29%2003-20-07.png)
+
+![signup page test](./testing/Screenshot%20from%202026-05-29%2003-20-35.png)
+
+## Lighthouse testing
+
+![lighthouse test](./Lighthouse%20testing/Screenshot%20from%202026-05-29%2004-07-49.png)
+The test revealed that a few things can be done to improve page load speed, but on the accessibility side, it seems to fear good.
+
+## wireframes
+
+The wireframe showed here initially was the designed being opted for. Thw wireframe helped to draw out the rough sketch in terms of what the website can look like. It was drawn by hand on a magnetic ink sketch board.
+![wireframe](./wireframe/wireframe%20sketch.jpeg)
+
+## known issues
+There seems to be a bug on the contact page where the nav link for the sign up page doesen't show up on the home page,
+but does show up when navigating to the about page. The issue could not be resolved and isolated. 
+
+# collaboration
+I am open to collaborate with you. Feel free to go to the repo and clone
+![repo](https://github.com/Anadil90/animal-soundbook)
