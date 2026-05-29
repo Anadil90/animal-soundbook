@@ -22,6 +22,10 @@ body,
     font-size: 37px;
 }
 
+a .nav-link:hover {
+    color:#6CB4EE;
+}
+
 .card {
     background-color: #B8E1FF;
     border: 2px solid #6CB4EE;
@@ -137,6 +141,15 @@ button[type=submit] {
 .col-6 {
     margin-top: 20px;
     text-align: center;
+}
+
+.main-content {
+    margin: 135px auto;
+}
+
+
+.nav-links:hover {
+    color: #B8E1FF;
 }
 
 /*media query to fix layout issues*/

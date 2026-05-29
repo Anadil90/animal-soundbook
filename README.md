@@ -33,4 +33,6 @@ Issue has been fixed by placing a media query at the 992px breakpoint and applyi
 
 ## Manual testing
 
-Upon first viewing the interactive soundbook page of the website, it has been found that the main section in the page is placed above the footer, which is a spacing issue.
+Upon first viewing the interactive soundbook page of the website, it has been found that the main section pops up above the header, which is a spacing issue. Applying margin to the top  of the section solved the issue. 
+
+The problem was solved by applying a z-index value of 0 on the section in the page with the animal tile grid, and a z-index value of 4 on the navbar. 
