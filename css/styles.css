@@ -97,11 +97,6 @@ footer {
 
 }
 
-.main-content {
-    /*apply margin with this class only to section in home page*/
-    margin: 130px 0;
-}
-
 /*bootstrap grid*/
 .card {
     width: 100%;
@@ -175,9 +170,8 @@ button[type=submit] {
 }
 
 .main-content {
-    margin: 135px auto;
+    margin: 135px 0;
 }
-
 
 .nav-links:hover {
     color: #B8E1FF;
@@ -199,9 +193,7 @@ button[type=submit] {
         margin: 10px 0;
     }
 
-    #main {
-        margin-top: 90px;
-    }
+    
 }
 
 @media screen and (min-width:992px) {
