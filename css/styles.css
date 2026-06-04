@@ -8,6 +8,7 @@ body {
     background-color: #F1C40F;
 }
 
+/*navbar, nav links*/
 .navbar {
     position: fixed;
     top: 0;
@@ -22,10 +23,21 @@ body,
     font-size: 37px;
 }
 
+.nav-item > .nav-link { /*reduce spacing within and apply spacing around the element*/
+    padding: 0;
+    margin: 0 10px;
+}
+
 a .nav-link:hover {
     color:#6CB4EE;
 }
 
+.active {/*active class applies styles to current page being visited*/
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+/*bootstrap card*/
 .card {
     background-color: #B8E1FF;
     border: 2px solid #6CB4EE;
