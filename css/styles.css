@@ -189,6 +189,19 @@ button[type=submit] {
     .navbar-brand, #navbarSupportedContent {
         font-size: 26px;
     }
+
+    .description-column {
+        align-self: center;
+        margin-top: 20px;
+    }
+
+    #image-description, #image-description-2 { /*reduce gap between paragraph and heading text*/
+        margin: 10px 0;
+    }
+
+    #main {
+        margin-top: 90px;
+    }
 }
 
 @media screen and (min-width:992px) {
@@ -209,7 +222,7 @@ button[type=submit] {
 
 @media screen and (min-width: 320px) and (max-width:1024px)  {
     #image-description, #image-description-2 {/*size text on paragraph for screen sizes between mobile and laptop*/
-        font-size: 24px;
+        font-size: 26px;
         text-align: justify;
     }
 }
