@@ -23,6 +23,11 @@ body,
     font-size: 37px;
 }
 
+.navbar-brand {
+    margin-left: 40px;
+    vertical-align: baseline;
+}
+
 .nav-item>.nav-link {
     /*reduce spacing within and apply spacing around the element*/
     padding: 0;
@@ -187,22 +192,11 @@ button[type=submit] {
         z-index: 4;
     }
 
-
-
 }
 
-/*fix styles of home page main content on 1024px screen size*/
-@media screen and (max-width:1024px) {
-
-    #image-description,
-    #image-description-2 {
+@media screen and (min-width: 320px) and (max-width:1024px)  {
+    #image-description, #image-description-2 {/*size text on paragraph for screen sizes between mobile and laptop*/
+        font-size: 24px;
         text-align: justify;
-        font-size: 23px;
-    }
-
-    .col-6 > .img-fluid {
-        height: 60%;
-        width: 100%;
-
     }
 }

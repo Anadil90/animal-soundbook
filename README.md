@@ -33,10 +33,41 @@ Issue has been fixed by placing a media query at the 992px breakpoint and applyi
 
 ## Manual testing
 
-- Upon first viewing the interactive soundbook page of the website, it has been found that the main section pops up above the header, which is a spacing issue. Applying margin to the top  of the section solved the issue. 
+* Expected: The page that displays the bootstrap grid with animal tiles should be responsive and have images that scale properly. The buttons to play the animal sounds should play the sound made by the animal.  
 
-- On mobile screen sizes of 320px, it has been found that the navbar simply overflows to the top of it. 
-The problem was solved by applying a z-index value of 0 on the section in the page with the animal tile grid, and a z-index value of 4 on the navbar. 
+Testing result - Upon first viewing the interactive soundbook page of the website, it has been found that the main section pops up above the header, which is a spacing issue. The buttons don't have the level of interactivity as being proposed to the user. 
+
+Fixes - Applying margin to the top  of the section, along with applying a z-index value of 0 on the section in the page with the animal tile grid, and a z-index value of 4 on the navbar solved the issue of content overflow. 
+
+* Expected: The navbar should have nav links that are centered and positioned in the right place, as expected of most websites that users come across. Users are used to the main nav links used to navigate websites on the right side, and the main home link with the logo or wesbite brand to be on the left side, and spaced properly against the left. The navbar should be responsive with font sizes resizing according to the screen width, and collapse on mobile screen sizes in order to allow users to see the nav links by clicking on the burger menu. All links should appear on the navbar accross all pages.
+
+Testing result - On mobile screen sizes of 320px, it has been found that the navbar simply overflows to the top of it. The font sizes don't scale according to screen width, and the nav links are not spaced and placed accordingly. The main nav links are in the middle of the nav element instead of the right. The brand link is not spaced against the left. Clicking on the hamburger menu does not perform any action. Therefore, it is non functional on mobile screen sizes. The nav link for the signup page does not show up on the home page and the contact page. 
+
+Fixes -Upon examining the pages, it has been found that the nav-link for the signup page was missing. Issue has been resolved by placing the respective link in the pages.
+
+* Problem 4 - Sizing of the images and their description text on the home page is garbled and does not represent the proper layout expected of responsive sizing on mobile screens. An issue with the Bootstrap grid.
+
+Solution - Inspect the Bootstrap classes and ensure that they have been applied properly.
+
+Fix - The problem has been fixed by changing the column classes to col-md-6 from col-6 on the bootstrap grid on the  home page. 
+
+* Problem 5 - On the 768px breakpoint for tablet screens, the nav links appear closer together in relation to the navbar-brand home link. 
+
+Solution - Resize the nav links, along with the home link, and apply proper spacing between them.
+
+Fix - 
+
+* Problem 6 - The footer links are not centered and positioned in the right place, and is not properly visible on screen size of 320px for mobile.
+
+Solution - Resize the footer links, and position them to be on the center of the footer.
+
+Fix - 
+
+Problem 7 - The navbar does not collapse on mobile screen sizes. 
+
+Solution - Examine the nav element and ensure that all classes to collapse the navbar on mobile screens has been properly applied. 
+
+Fix - 
 
 ## How to view the project
 
