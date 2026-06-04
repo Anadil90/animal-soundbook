@@ -37,6 +37,11 @@ a .nav-link:hover {
     border-bottom: 2px solid #000000;
 }
 
+#image-description,
+#image-description-2 {/*apply margin to top and bottom of image description text on home page*/ 
+    margin: 48px 0;
+}
+
 /*bootstrap card*/
 .card {
     background-color: #B8E1FF;
