@@ -23,22 +23,25 @@ body,
     font-size: 37px;
 }
 
-.nav-item > .nav-link { /*reduce spacing within and apply spacing around the element*/
+.nav-item>.nav-link {
+    /*reduce spacing within and apply spacing around the element*/
     padding: 0;
     margin: 0 10px;
 }
 
 a .nav-link:hover {
-    color:#6CB4EE;
+    color: #6CB4EE;
 }
 
-.active {/*active class applies styles to current page being visited*/
+.active {
+    /*active class applies styles to current page being visited*/
     color: #000000;
     border-bottom: 2px solid #000000;
 }
 
 #image-description,
-#image-description-2 {/*apply margin to top and bottom of image description text on home page*/ 
+#image-description-2 {
+    /*apply margin to top and bottom of image description text on home page*/
     margin: 48px 0;
 }
 
@@ -179,7 +182,27 @@ button[type=submit] {
     #main {
         z-index: 0;
     }
+
     .navbar {
         z-index: 4;
+    }
+
+
+
+}
+
+/*fix styles of home page main content on 1024px screen size*/
+@media screen and (max-width:1024px) {
+
+    #image-description,
+    #image-description-2 {
+        text-align: justify;
+        font-size: 23px;
+    }
+
+    .col-6 > .img-fluid {
+        height: 60%;
+        width: 100%;
+
     }
 }
