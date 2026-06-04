@@ -184,7 +184,14 @@ button[type=submit] {
 }
 
 /*media query to fix layout issues*/
-@media screen and (min-height:992px) {
+
+@media screen and (max-width:768px) {/*fix for improper sizes of nav links on tablet screen sizes*/
+    .navbar-brand, #navbarSupportedContent {
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width:992px) {
     .card .card-img-top {
         min-height: 174px;
     }
