@@ -25,11 +25,7 @@ Upon research, i have found that children are attracted towards bright colours l
 
 I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes with Hex Codes & AI Design Examples] (https://www.media.io/color-palette/kids-color-palette.html)
 
-## Initial issues faced
 
-One of the bootstrap cards seem to have unequal heights based on the size of the images. There seems to be a single factor controlling the height of the images. The desirable outcome is for the images on the card to be of equal height irrespective of the breakpoint. 
-
-Issue has been fixed by placing a media query at the 992px breakpoint and applying a minimum height of 200px to the particular card that had unequal height.
 
 ## Manual testing
 
@@ -60,8 +56,8 @@ Fixes:
 - The default font size for the body, along with the navbar brand link and the nav links has been changed to 1.6rem for a more uniform sizing of the text in relation to the screen sizes. 
 - The font size of the description paragraphs on the home page has been changed to 1em for more responsive sizing.
 - 
-- The columns of the row in the home page has been centered by applying the property and value align-content:center. This gives a more clean and consistent look to the content, and negates the need for an excessive margin on top of the image description heading to push it down.
-
+- The columns of the row in the home page has been centered by applying the property and value align-content:center. This gives a more clean and consistent look to the content on laptop and desktop screen sizes, as well as negate the need for an excessive margin on top of the image description heading to push it down.
+- On the breakpoint between 768 and 992px, the columns has been placed accordingly to line with the text by using the align-content property. On the fourth column, which is the column for the description text of the second image a margin of 90px has been added to push down the description text to be level with the image.  
 * Problem 5 - On the 768px breakpoint for tablet screens, the nav links appear closer together in relation to the navbar-brand home link. 
 
 Solution - Resize the nav links, along with the home link, and apply proper spacing between them.
@@ -79,6 +75,16 @@ Problem 7 - The navbar does not collapse on mobile screen sizes.
 Solution - Examine the nav element and ensure that all classes to collapse the navbar on mobile screens has been properly applied. 
 
 Fix - 
+
+## Further fixes
+
+One of the bootstrap cards seem to have unequal heights based on the size of the images. There seems to be a single factor controlling the height of the images. The desirable outcome is for the images on the card to be of equal height irrespective of the breakpoint. 
+
+Issue has been fixed by placing a media query at the 992px breakpoint and applying a minimum height of 200px to the particular card that had unequal height.
+
+- Many redundant styles, inlcuding media queries, were found on the main stylesheet. The styles had minimal, or no effect on the elements, or were duplications of media queries that could have been consolidated into one single media query line. These styles were removed
+
+- The animal tile grid section section overflows on top of the navbar on the page to play the animal sounds. Setting a z-index property to the value of 3 solved the issue. Furthermore, this property was also found to be placed at the media query breakpoint of 992px for both the #main and .navbar element, when it was not required to be there at all. The property was moved to the .navbar style declaration as a global declaration for all the pages. There is absolutely no need for a media query declaration just to do this.
 
 ## How to view the project
 

@@ -14,18 +14,22 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 3;
 }
 
-body,
-.navbar-brand {
+body, .navbar-brand {
     /*apply font to the body and the navbar brand link*/
     font-family: "caveat", sans-serif;
-    font-size: 1.6rem;
+}
+
+body {
+    font-size: 1.8rem;
 }
 
 .navbar-brand { /*center on the vertical axis and move the brand link to the right by 40px*/
     margin-left: 40px;
     vertical-align: baseline;
+    font-size: 1.6rem;
 }
 
 #navbarSupportedContent {
@@ -34,7 +38,7 @@ body,
     justify-content: end;
 }
 
-.nav-item>.nav-link {
+.nav-item > .nav-link {
     /*reduce spacing within and apply spacing around the horizontal axis of the element*/
     padding: 0;
     margin: 0 10px;
@@ -61,6 +65,7 @@ a .nav-link:hover {
     /*apply margin to top and bottom of image description text on home page*/
     margin: 48px 0;
     font-size: 1em;
+    text-align: justify;
 }
 
 /*images on home page*/
@@ -191,12 +196,10 @@ button[type=submit] {
 }
 
 /*media query to fix layout issues*/
-
-@media screen and (max-width:768px) {/*fix for improper sizes of nav links on tablet screen sizes*/
-    .navbar-brand, #navbarSupportedContent {
-        font-size: 26px;
-    }
-
+/*global media queries for all pages*/
+@media screen and (min-width:320px) and (max-width:768px) {/*fix for improper sizes of nav links on small screen sizes*/
+    
+    /*media queries for the home page*/
     .description-column {
         align-self: center;
         margin-top: 20px;
@@ -204,30 +207,41 @@ button[type=submit] {
 
     #image-description, #image-description-2 { /*reduce gap between paragraph and heading text*/
         margin: 10px 0;
+        font-size: 1.2rem;
     }
 
     
 }
 
+@media screen and (max-width:992px) {
+    #image-description-2 {/*align the paragraph with the image*/
+        margin-top: 90px;
+    }
+    /*align images to be spaced around the text*/
+    .child-image1 {
+        align-content: space-around;
+    }
+
+    .child-image2 {
+        align-content: baseline;
+    }
+
+    #image-description {
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #image-description, #image-description-2{
+        font-size: 1.25rem;
+    }
+}
+
+/*media queries for the soundbook page*/
 @media screen and (min-width:992px) {
     .card .card-img-top {
         min-height: 174px;
     }
 
-    /*fix section overflowing over the navbar in mobile screen size*/
-    #main {
-        z-index: 0;
-    }
 
-    .navbar {
-        z-index: 4;
-    }
-
-}
-
-@media screen and (min-width: 320px) and (max-width:1024px)  {
-    #image-description, #image-description-2 {/*size text on paragraph for screen sizes between mobile and laptop*/
-        font-size: 26px;
-        text-align: justify;
-    }
 }
