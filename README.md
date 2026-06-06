@@ -45,11 +45,22 @@ Testing result - On mobile screen sizes of 320px, it has been found that the nav
 
 Fixes - Upon examining the pages, it has been found that the nav-link for the signup page was missing. Issue has been resolved by placing the respective link in the pages. The nav links have been vertically centered by applying the vertical-alignment property, and the main nav links have been moved to the right of the navbar by applying the align-items property. The navbar brand link has also been centered by using the vertical-alignment property as used for the nav links, and in addition, a margin of 40px has been applied to move the brand link away from the horizontal start axis of the navbar. The brand link being too close to the start axis was logged as being an issue of distraction for the user. The same applies for the nav links being in the center instead of the right. Font size of the nav links and the brand link up until the 768px breakpoint is too big, and has been reduced to 26px. Upon a closer look, it has been determined that the cdn links to bootstrap in the link tags on the head of all pages except the soundbook.html page were pointed to bootstrap version 5.3.3. This version of bootstrap causes issues when attempting to collapse the navbar. placing the cdn link to bootstrap 5.3.8 solved the issue of the navbar hamburger button not triggering the dropdown for the nav links on mobile screen sizes. The button now successfully triggers the drop down menu and shows the nav links.
 
-* Problem 4 - Sizing of the images and their description text on the home page is garbled and does not represent the proper layout expected of responsive sizing on mobile screens. An issue with the Bootstrap grid.
+* Expected: The images and text on the home page should resize and fit in their columns fluidly, so as to represent responsive design. This should be according to the respective breakpoints accross various devices. The images should have an aspect ratio similar or close to that of each other, so that they are able to be resized nicely.
 
-Solution - Inspect the Bootstrap classes and ensure that they have been applied properly.
+* Testing result: 
 
-Fix - The problem has been fixed by changing the column classes to col-md-6 from col-6 on the bootstrap grid on the  home page. 
+- Sizing of the images and their description text on the home page is garbled and does not represent the proper layout expected of responsive sizing on mobile screens. Font sizes do not resize accordingly to fit in their columns when the browser window is resized to smaller widths, making the text distracting to read, as well as obtrusive and oversized. 
+- Font sizing is not uniform across different screen widths. 
+- The first image next to the description text is too high and not too wide. This makes it look non-uniform as compared to the aspect ratio of the other image below on the third column. 
+- There seems to be no indication as to whether the content of the columns belong within a particular boundary. This makes the text and image simply blend and mix into the background, which would be deemed as not being so accessible to the user in terms of visual clarity. 
+- When the images scale down in size, they occupy the start of the vertical axis, which in turn gives the appearance of a gap existing on the bottom of the column. This makes the text look disproportionate as compared to the scaled down image on certain breakpoints. 
+
+Fixes: 
+- The first image of the column next to the description text has been changed to another image that has a aspect ratio more closely matching that of the second image. This has made the scaling more smoother and uniform.
+- The default font size for the body, along with the navbar brand link and the nav links has been changed to 1.6rem for a more uniform sizing of the text in relation to the screen sizes. 
+- The font size of the description paragraphs on the home page has been changed to 1em for more responsive sizing.
+- 
+- The columns of the row in the home page has been centered by applying the property and value align-content:center. This gives a more clean and consistent look to the content, and negates the need for an excessive margin on top of the image description heading to push it down.
 
 * Problem 5 - On the 768px breakpoint for tablet screens, the nav links appear closer together in relation to the navbar-brand home link. 
 

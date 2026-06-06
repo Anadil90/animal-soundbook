@@ -20,7 +20,7 @@ body,
 .navbar-brand {
     /*apply font to the body and the navbar brand link*/
     font-family: "caveat", sans-serif;
-    font-size: 37px;
+    font-size: 1.6rem;
 }
 
 .navbar-brand { /*center on the vertical axis and move the brand link to the right by 40px*/
@@ -38,6 +38,7 @@ body,
     /*reduce spacing within and apply spacing around the horizontal axis of the element*/
     padding: 0;
     margin: 0 10px;
+    font-size: 1.6rem;
 }
 
 a .nav-link:hover {
@@ -50,10 +51,22 @@ a .nav-link:hover {
     border-bottom: 2px solid #000000;
 }
 
+/*align content and size text on home page*/
+.description-column {
+    align-content: center;
+}
+
 #image-description,
 #image-description-2 {
     /*apply margin to top and bottom of image description text on home page*/
     margin: 48px 0;
+    font-size: 1em;
+}
+
+/*images on home page*/
+.img-fluid {
+    width: 100%;
+    height: auto;
 }
 
 /*bootstrap card*/
@@ -64,7 +77,7 @@ a .nav-link:hover {
 
 .card .card-body h3 {
     font-family: "caveat", sans-serif;
-    font-size: 27px;
+    font-size: 1.2em;
 }
 
 .card .card-body .btn-info {
