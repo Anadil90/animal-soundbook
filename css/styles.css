@@ -116,6 +116,12 @@ footer {
 }
 
 /*bootstrap grid*/
+.row {/*background color for a smoother touch to the content and better visibility.*/
+    background-color: #ffa9;
+    padding: 30px 10px;
+    row-gap: 30px;
+}
+
 .card {
     width: 100%;
 }
