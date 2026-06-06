@@ -55,7 +55,7 @@ Fixes:
 - The first image of the column next to the description text has been changed to another image that has a aspect ratio more closely matching that of the second image. This has made the scaling more smoother and uniform.
 - The default font size for the body, along with the navbar brand link and the nav links has been changed to 1.6rem for a more uniform sizing of the text in relation to the screen sizes. 
 - The font size of the description paragraphs on the home page has been changed to 1em for more responsive sizing.
-- 
+- A background color of #ffa9 has been applied to the row for a more subtle touch to the content of the row. A gap of 30px on the row seperates the content from each other, as well as a padding of 30px to the top and bottom and 10px on the left and right makes it look a bit better. There is now a clear distinction between the main background and the row.
 - The columns of the row in the home page has been centered by applying the property and value align-content:center. This gives a more clean and consistent look to the content on laptop and desktop screen sizes, as well as negate the need for an excessive margin on top of the image description heading to push it down.
 - On the breakpoint between 768 and 992px, the columns has been placed accordingly to line with the text by using the align-content property. On the fourth column, which is the column for the description text of the second image a margin of 90px has been added to push down the description text to be level with the image.  
 * Problem 5 - On the 768px breakpoint for tablet screens, the nav links appear closer together in relation to the navbar-brand home link. 
