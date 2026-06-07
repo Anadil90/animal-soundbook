@@ -202,35 +202,17 @@ button[type=submit] {
 }
 
 /*media query to fix layout issues*/
-/*global media queries for all pages*/
-@media screen and (min-width:320px) and (max-width:768px) {/*fix for improper sizes of nav links on small screen sizes*/
-    
-    /*media queries for the home page*/
-    .description-column {
-        align-self: center;
-        margin-top: 20px;
-    }
-
-    #image-description, #image-description-2 { /*reduce gap between paragraph and heading text*/
-        margin: 10px 0;
-        font-size: 1.2rem;
-    }
-
-    .navbar-brand {
-        margin-left: 10px;
-    }
-}
 
 @media screen and (max-width:992px) {
     #image-description-2 {/*align the paragraph with the image*/
         margin-top: 90px;
     }
     /*align images to be spaced around the text*/
-    .child-image1 {
+    .child-image1 {/*first image of the section in home page*/
         align-content: space-around;
     }
 
-    .child-image2 {
+    .child-image2 {/*second image of the section in home page*/
         align-content: baseline;
     }
 
@@ -252,4 +234,21 @@ button[type=submit] {
     }
 
 
+}
+
+@media screen and (min-width:320px) and (max-width:768px) {/*fix for improper sizes of nav links on small screen sizes*/
+    
+    /*media queries for the home page*/
+    #image-description, #image-description-2 { /*reduce gap between paragraph and heading text*/
+        margin: 5px 0;
+        font-size: 1.2rem; /*decrease font size of paragraphs for small and medium screens*/
+    }
+
+    .navbar-brand {
+        margin-left: 10px;
+    }
+
+    .row {/*reduce row gap to bring content closer together for mobile screen viewing*/
+        row-gap: 5px;
+    }
 }

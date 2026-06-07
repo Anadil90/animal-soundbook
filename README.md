@@ -49,7 +49,8 @@ Fixes - Upon examining the pages, it has been found that the nav-link for the si
 - Font sizing is not uniform across different screen widths. 
 - The first image next to the description text is too high and not too wide. This makes it look non-uniform as compared to the aspect ratio of the other image below on the third column. 
 - There seems to be no indication as to whether the content of the columns belong within a particular boundary. This makes the text and image simply blend and mix into the background, which would be deemed as not being so accessible to the user in terms of visual clarity. 
-- When the images scale down in size, they occupy the start of the vertical axis, which in turn gives the appearance of a gap existing on the bottom of the column. This makes the text look disproportionate as compared to the scaled down image on certain breakpoints. 
+- When the images scale down in size, they occupy the start of the vertical axis, which in turn gives the appearance of a gap existing on the bottom of the column. This makes the text look disproportionate as compared to the scaled down image on certain breakpoints.
+- There is extra space on top of the columns for image descriptions on the home page, which further pushes the text down from the images.  
 
 Fixes: 
 - The first image of the column next to the description text has been changed to another image that has a aspect ratio more closely matching that of the second image. This has made the scaling more smoother and uniform.
@@ -58,9 +59,9 @@ Fixes:
 - A background color of #ffa9 has been applied to the row for a more subtle touch to the content of the row. A gap of 30px on the row seperates the content from each other, as well as a padding of 30px to the top and bottom and 10px on the left and right makes it look a bit better. There is now a clear distinction between the main background and the row.
 - The columns of the row in the home page has been centered by applying the property and value align-content:center. This gives a more clean and consistent look to the content on laptop and desktop screen sizes, as well as negate the need for an excessive margin on top of the image description heading to push it down.
 - On the breakpoint between 768 and 992px, the columns has been placed accordingly to line with the text by using the align-content property. On the fourth column, which is the column for the description text of the second image a margin of 90px has been added to push down the description text to be level with the image.  
+- A margin of 20px to the top of both the description columns for the images on the home page has been removed from the .description-column style declaration. It is not applicable anymore, as the property row-gap does the work of spacing apart the columns on the row. At this point, the extra spacing needed to be removed. 
 * Problem 5 - On the 768px breakpoint for tablet screens, the nav links appear closer together in relation to the navbar-brand home link. 
 
-Solution - Resize the nav links, along with the home link, and apply proper spacing between them.
 
 Fix - 
 
@@ -68,13 +69,6 @@ Fix -
 
 Solution - Resize the footer links, and position them to be on the center of the footer.
 
-Fix - 
-
-Problem 7 - The navbar does not collapse on mobile screen sizes. 
-
-Solution - Examine the nav element and ensure that all classes to collapse the navbar on mobile screens has been properly applied. 
-
-Fix - 
 
 ## Further fixes
 
@@ -85,6 +79,8 @@ Issue has been fixed by placing a media query at the 992px breakpoint and applyi
 - Many redundant styles, inlcuding media queries, were found on the main stylesheet. The styles had minimal, or no effect on the elements, or were duplications of media queries that could have been consolidated into one single media query line. These styles were removed
 
 - The animal tile grid section section overflows on top of the navbar on the page to play the animal sounds. Setting a z-index property to the value of 3 solved the issue. Furthermore, this property was also found to be placed at the media query breakpoint of 992px for both the #main and .navbar element, when it was not required to be there at all. The property was moved to the .navbar style declaration as a global declaration for all the pages. There is absolutely no need for a media query declaration just to do this.
+
+- The property and value align-self:center applied to the images on the home screen are redundant now, because of other properties present to align and space the content on particular breakpoints. It, along with the .description-column style declaration for the columns has been removed.
 
 ## How to view the project
 
