@@ -83,6 +83,16 @@ Fixes:
 **Fix**
 - The footer links have been centered vertically by using the property align-items:center, and horizontally by using the text-align property. The hierarchy of the links on the footer were not in a fashion that users can easily navigate through the website. The hierarchy has been changed to be first Home, then About and at last Contact for the mobile breakpoint. On screen sizes larger than 768px, the sign up link shows up. On mobile screens, the display of the sign up link is hidden. 
 
+**Expected: The description column on the about page should be readable on all screen widths and be sized accordingly with respect to the screen breakpoints**
+
+**Testing result**
+The about paragraph was found to be squashed in from top to bottom. Upon reviewing the page structure, it was found that the paragraph was contained in column of 6 units, which is not neccessary. An inline style was found applying margin to the top of the section. 
+
+**Fixes** 
+- The bootstrap column was unneccessarily divided into two columns, where it seemed evident that perhaps the second column was not meant to have any content. The column class was changed to .col-lg-12  from col-6 to take up the full width of a single column. As it is a description paragraph, one column is more suited to it. The column is now responsive, making it easier to read the text content. 
+- An inline style applying margin to the top was moved to the main stylesheet, as there is no need to explicitly enforce higher specificity just to apply this style.
+
+
 
 ## Further fixes
 

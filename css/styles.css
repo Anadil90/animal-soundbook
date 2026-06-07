@@ -195,6 +195,13 @@ button[type=submit] {
     color: #B8E1FF;
 }
 
+/*styles for the about page*/
+#about {/*push the section down and center it*/
+    margin: 135px 0;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
 /*media query to fix layout issues*/
 
 @media screen and (max-width:992px) {
@@ -261,5 +268,10 @@ button[type=submit] {
 
     .hide {
         display: none;
+    }
+
+    /*media query declarations for the about page*/
+    #about {/*resize font for smaller screens*/
+        font-size: 1.2rem;
     }
 }
