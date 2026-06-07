@@ -60,15 +60,13 @@ Fixes:
 - The columns of the row in the home page has been centered by applying the property and value align-content:center. This gives a more clean and consistent look to the content on laptop and desktop screen sizes, as well as negate the need for an excessive margin on top of the image description heading to push it down.
 - On the breakpoint between 768 and 992px, the columns has been placed accordingly to line with the text by using the align-content property. On the fourth column, which is the column for the description text of the second image a margin of 90px has been added to push down the description text to be level with the image.  
 - A margin of 20px to the top of both the description columns for the images on the home page has been removed from the .description-column style declaration. It is not applicable anymore, as the property row-gap does the work of spacing apart the columns on the row. At this point, the extra spacing needed to be removed. 
-**Expected: The nav links should collapse into the hamburger menu at a particular breakpoint in order to prevent the nav links from leaning against the navbar brand link. The nav links collapse down from under the main brand link, so that the user can easily associate the website name with the content. The links are clearly visible with nice contrasting between the navbar background and the nav links. The navbar toggler button should appear positioned correctly on the right side of the navbar on mobile and tablet breakpoints.**
+**Expected: The nav links should collapse into the hamburger menu at a particular breakpoint in order to prevent the nav links from leaning against the navbar brand link. The nav links collapse down from under the main brand link, so that the user can easily associate the website name with the content. The links are clearly visible with nice contrasting between the navbar background and the nav links.**
 **Testing result**
 - The collapse menu triggers at the wrong breakpoint, therefore making the links close in together at the medium breakpoint, and only triggers at 320px screen size.
 - The white background of the navbar is not so nicely contrasted with the color of the nav links
 - The nav links drop down from under the navabar brand link, but its stretched to the full width of its container #navbarSupportedContent, making the active class apply the border to the full width. This display is not desirable.
-- The toggler button is positioned relatively wrong on the navbar, due to the nav links pushing it aside. 
 **Fixes**
 - The nav element of all pages had a class of .navbar-expand-sm. This was the wrong class, making it trigger the navbar hamburger menu only at the small screen(320px) size. This has been changed to .navbar-expand-md to collapse at the 768px breakpoint.
-- The navbar toggler has been positioned absolutely to 10px on the top and 5px to the right of the navbar to fix it in place.
 - Width of the nav links have been reduced by setting the property and value width:fit-content. Background color of aliceblue has been applied to the #navbarSupportedContent container to contrast the nav links better for viewability.
 
 

@@ -251,4 +251,17 @@ button[type=submit] {
     .row {/*reduce row gap to bring content closer together for mobile screen viewing*/
         row-gap: 5px;
     }
+
+    .nav-item {
+        width: fit-content;
+    }
+
+    #navbarSupportedContent {
+        background-color: aliceblue;
+        margin-top: 5px;
+    }
+
+    .call-to-action {/*resize button for mobile screen viewing*/
+        font-size: 20px;
+    }
 }
