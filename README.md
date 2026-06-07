@@ -69,18 +69,19 @@ Fixes:
 - The nav element of all pages had a class of .navbar-expand-sm. This was the wrong class, making it trigger the navbar hamburger menu only at the small screen(320px) size. This has been changed to .navbar-expand-md to collapse at the 768px breakpoint.
 - Width of the nav links have been reduced by setting the property and value width:fit-content. Background color of aliceblue has been applied to the #navbarSupportedContent container to contrast the nav links better for viewability.
 
+**Expected: The call to action button on the home page should be resize accordingly when the mobile and tablet screen breakpoint has been triggered**
+**Testing result**
+- Button is same size as it is in the other breakpoints for larger screens. 
+**fix**
+- The font size of the button has been reduced to 20px to better fit the small viewport of mobile devices. The font size compliments readability due to the font family being applied globally.
 
+**Expected: The footer links are positioned properly, centered on the middle of the footer. On mobile breakpoint, three main footer links deemed neccessary for the user are visible. On screen sizes bigger than 768px, the sign up link is displayed**
 
+**Testing result**
+- The footer links are off-center and all links try to fit along the footer, which is not the desired outcome. They are also not properly visible on screen size of 320px for mobile, which makes it difficult to see the footer links.
 
-
-On the 768px breakpoint for tablet screens, the nav links appear closer together in relation to the navbar-brand home link. 
-
-
-Fix - 
-
-* Problem 6 - The footer links are not centered and positioned in the right place, and is not properly visible on screen size of 320px for mobile.
-
-Solution - Resize the footer links, and position them to be on the center of the footer.
+**Fix**
+- The footer links have been centered vertically by using the property align-items:center, and horizontally by using the text-align property. The hierarchy of the links on the footer were not in a fashion that users can easily navigate through the website. The hierarchy has been changed to be first Home, then About and at last Contact for the mobile breakpoint. On screen sizes larger than 768px, the sign up link shows up. On mobile screens, the display of the sign up link is hidden. 
 
 
 ## Further fixes
