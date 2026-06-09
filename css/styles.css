@@ -202,6 +202,11 @@ button[type=submit] {
     font-size: 1.2rem;
 }
 
+/*soundbook page styles*/
+audio {
+    width: 100px;
+}
+
 /*media query to fix layout issues*/
 
 @media screen and (max-width:992px) {

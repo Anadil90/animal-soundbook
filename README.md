@@ -33,7 +33,9 @@ I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes w
 
 Testing result - Upon first viewing the interactive soundbook page of the website, it has been found that the main section pops up above the header, which is a spacing issue. The buttons don't have the level of interactivity as being proposed to the user. 
 
-Fixes - Applying margin to the top  of the section, along with applying a z-index value of 0 on the section in the page with the animal tile grid, and a z-index value of 4 on the navbar solved the issue of content overflow. 
+Fixes
+- Applying margin to the top  of the section, along with applying a z-index value of 0 on the section in the page with the animal tile grid, and a z-index value of 4 on the navbar solved the issue of content overflow. 
+- An audio element has been nested inside the h3 heading of the card body in the bootstrap card. The audio element was resized to fit inside the h3, and will serve as the means to play the sound of the animal in the animal tile grid. It was attempted to play the sounds with a small javascript snippet, but that proved to be out of the scope of the project due to the complexity of getting the script to play all the sounds of the animal, instead of just one. For this reason, the script snippet was removed from the bottom of the body, and the audio element was implemented in its place. The audio elements does the job nicely, and was not too difficult to set up.  
 
 **Expected: The navbar should have nav links that are centered and positioned in the right place, as expected of most websites that users come across. Users are used to the main nav links used to navigate websites on the right side, and the main home link with the logo or wesbite brand to be on the left side, and spaced properly against the left. The navbar should be responsive with font sizes resizing according to the screen width, and collapse on mobile screen sizes in order to allow users to see the nav links by clicking on the burger menu. All links should appear on the navbar accross all pages.**
 
@@ -92,6 +94,19 @@ The about paragraph was found to be squashed in from top to bottom. Upon reviewi
 - The bootstrap column was unneccessarily divided into two columns, where it seemed evident that perhaps the second column was not meant to have any content. The column class was changed to .col-lg-12  from col-6 to take up the full width of a single column. As it is a description paragraph, one column is more suited to it. The column is now responsive, making it easier to read the text content. 
 - An inline style applying margin to the top was moved to the main stylesheet, as there is no need to explicitly enforce higher specificity just to apply this style.
 
+
+**Expected: The section with the Animal tile grid is responsive and contains the animal tiles within it without spilling over the boundaries of the section. The grid is centered and contains tiles of the appropriate dimensions in terms of height and width.**
+
+**Test conducted**
+- Resize the browser window and determine whether the bootstrap grid has a proper layout, in terms of the tiles displaying according to the column classes being applied, as well as responsively resizing according to the screen width. 
+- Inspect the individual breakpoints for mobile, tablet, laptop and desktop screens with the dev tools of the browser to assure that the content of the grid is resized properly, in addition to ensuring that the grid is properly spaced and aligned along the body.
+
+**Testing result**
+The testing made it clear that the bootstrap grid was spilling its' content out of the container. Upon viewing the soundbook page, the entire container seemed to be out of place, as if it was forced to be positioned out of the normal position flow. Attempting to increase the width of the container resulted in it actually shrinking the content. It was clear there was a mess up either in the bootstrap grid, or the main container. 
+
+**Fixes** 
+- Upon inspection, it was found that there was an extra div in the bootstrap row that caused the bootstrap grid to break and display the cards properly. The div was removed and that resulted the grid containing the cards within the row, and not spilling out of it.
+- The container class was used in the section element. Upon googling the issue, it was found out that it is not the best practice to apply the container class on a section, but to rather nest a div inside the section and apply the container class on it. Removing the container class from the section itself proved to be fruitful, as the grid right then displayed properly, placed along the center of the body. Placing the row inside of the container made the grid display exactly as the way it was meant to be displayed, clean with spacing. 
 
 
 ## Further fixes
