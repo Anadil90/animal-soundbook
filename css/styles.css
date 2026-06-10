@@ -205,8 +205,18 @@ button[type=submit] {
 /*soundbook page styles*/
 audio {
     width: 100px;
+    height: 45px;
 }
 
+.card-heading-container {/*container for the bootstrap card heading and the audio element*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card-body {/*reduce padding to better accomodate the contents of the card body*/
+    padding: 10px 0;
+}
 /*media query to fix layout issues*/
 
 @media screen and (max-width:992px) {
