@@ -17,7 +17,8 @@ body {
     z-index: 3;
 }
 
-body, .navbar-brand {
+body,
+.navbar-brand {
     /*apply font to the body and the navbar brand link*/
     font-family: "caveat", sans-serif;
 }
@@ -26,7 +27,8 @@ body {
     font-size: 1.8rem;
 }
 
-.navbar-brand { /*center on the vertical axis and move the brand link to the right by 40px*/
+.navbar-brand {
+    /*center on the vertical axis and move the brand link to the right by 40px*/
     margin-left: 40px;
     vertical-align: baseline;
     font-size: 1.6rem;
@@ -38,7 +40,7 @@ body {
     justify-content: end;
 }
 
-.nav-item > .nav-link {
+.nav-item>.nav-link {
     /*reduce spacing within and apply spacing around the horizontal axis of the element*/
     padding: 0;
     margin: 0 10px;
@@ -82,7 +84,7 @@ a .nav-link:hover {
 
 .card .card-body h3 {
     font-family: "caveat", sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .card .card-body .btn-info {
@@ -116,7 +118,8 @@ footer {
 }
 
 /*bootstrap grid*/
-.row {/*background color for a smoother touch to the content and better visibility.*/
+.row {
+    /*background color for a smoother touch to the content and better visibility.*/
     background-color: #ffa9;
     padding: 30px 10px;
     row-gap: 30px;
@@ -196,7 +199,8 @@ button[type=submit] {
 }
 
 /*styles for the about page*/
-#about {/*push the section down and center it*/
+#about {
+    /*push the section down and center it*/
     margin: 135px 0;
     text-align: justify;
     font-size: 1.2rem;
@@ -208,38 +212,68 @@ audio {
     height: 45px;
 }
 
-.card-heading-container {/*container for the bootstrap card heading and the audio element*/
+.card-heading-container {
+    /*container for the bootstrap card heading and the audio element*/
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.card-body {/*reduce padding to better accomodate the contents of the card body*/
+.card-body {
+    /*reduce padding to better accomodate the contents of the card body*/
     padding: 10px 0;
 }
-/*media query to fix layout issues*/
+
+.hide-content {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 60px;
+    background-color: aliceblue;
+    border-radius: 20px;
+
+}
+
+/*media queries to fix layout issues*/
 
 @media screen and (max-width:992px) {
-    #image-description-2 {/*align the paragraph with the image*/
+
+    /*media queries for screens of up to 992px*/
+    #image-description-2 {
+        /*align the paragraph with the image*/
         margin-top: 90px;
     }
+
     /*align images to be spaced around the text*/
-    .child-image1 {/*first image of the section in home page*/
+    .child-image1 {
+        /*first image of the section in home page*/
         align-content: space-around;
     }
 
-    .child-image2 {/*second image of the section in home page*/
+    .child-image2 {
+        /*second image of the section in home page*/
         align-content: baseline;
     }
 
     #image-description {
         margin: 20px 0;
     }
+
+    /*media queries for the soundbook page*/
+    .hide-content {
+        font-size: 18px;
+    }
+
 }
 
-@media screen and (max-width:1200px) {
-    #image-description, #image-description-2{
+@media screen and (max-width:1200px) {/*media queries for screens of up to 1200px*/
+    #image-description,
+    #image-description-2 {
         font-size: 1.25rem;
+    }
+
+    .hide-content {
+        font-size: 19px;
     }
 }
 
@@ -249,22 +283,28 @@ audio {
         min-height: 174px;
     }
 
-
+    .hide-content {
+        font-size: 19px;
+    }
 }
 
-@media screen and (min-width:320px) and (max-width:768px) {/*fix for improper sizes of nav links on small screen sizes*/
-    
+@media screen and (min-width:320px) and (max-width:768px) {/*media queries for mobile devices*/
+
     /*media queries for the home page*/
-    #image-description, #image-description-2 { /*reduce gap between paragraph and heading text*/
+    #image-description,
+    #image-description-2 {
+        /*reduce gap between paragraph and heading text*/
         margin: 5px 0;
-        font-size: 1.2rem; /*decrease font size of paragraphs for small and medium screens*/
+        font-size: 1.2rem;
+        /*decrease font size of paragraphs for small and medium screens*/
     }
 
     .navbar-brand {
         margin-left: 10px;
     }
 
-    .row {/*reduce row gap to bring content closer together for mobile screen viewing*/
+    .row {
+        /*reduce row gap to bring content closer together for mobile screen viewing*/
         row-gap: 5px;
     }
 
@@ -277,7 +317,8 @@ audio {
         margin-top: 5px;
     }
 
-    .call-to-action {/*resize button for mobile screen viewing*/
+    .call-to-action {
+        /*resize button for mobile screen viewing*/
         font-size: 20px;
     }
 
@@ -286,7 +327,14 @@ audio {
     }
 
     /*media query declarations for the about page*/
-    #about {/*resize font for smaller screens*/
+    #about {
+        /*resize font for smaller screens*/
         font-size: 1.2rem;
+    }
+
+    /*media query declaration for the soundbook page*/
+    .hide-content {
+        /*resize the text of span with class hide content to fit heading container on mobile screens*/
+        font-size: 18px;
     }
 }
