@@ -148,6 +148,8 @@ footer {
     text-align: left;
 }
 
+
+
 .img-caption {
     background-color: aquamarine;
 }
@@ -233,7 +235,12 @@ audio {
     border-radius: 20px;
 
 }
+/*apply background color to blend in span to hide part of audio element with audio element*/ 
 
+.hide-content {
+    background-color: whitesmoke;
+    width: 60px;
+}
 /*media queries to fix layout issues*/
 
 @media screen and (max-width:992px) {
@@ -261,7 +268,8 @@ audio {
 
     /*media queries for the soundbook page*/
     .hide-content {
-        font-size: 18px;
+        font-size: 25px;
+        font-weight: 600;
     }
 
 }
@@ -270,10 +278,6 @@ audio {
     #image-description,
     #image-description-2 {
         font-size: 1.25rem;
-    }
-
-    .hide-content {
-        font-size: 19px;
     }
 }
 
@@ -284,8 +288,11 @@ audio {
     }
 
     .hide-content {
-        font-size: 19px;
+        font-size: 25px;
+        font-weight: 600;
     }
+
+
 }
 
 @media screen and (min-width:320px) and (max-width:768px) {/*media queries for mobile devices*/
@@ -334,7 +341,8 @@ audio {
 
     /*media query declaration for the soundbook page*/
     .hide-content {
-        /*resize the text of span with class hide content to fit heading container on mobile screens*/
-        font-size: 18px;
+        /*style the text of span with class hide for better viweability on mobile screens*/
+        font-size: 23px;
+        font-weight: 600;
     }
 }
