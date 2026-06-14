@@ -12,7 +12,7 @@ Animal sounbook is not trying to reinvent the wheel, rather the goal is to take 
 1. Parents of children
 2. Children
 
-The home page serves as the primary point of the call to action, where engaging text attempts to draw in the audience to the call-to-action, which is clicking the play me! button and landing on the page where the users see the animal card grid. Drawing the interest of parents mean a likehood of the website being used for their children. When children tend to be using the website on a considerable scale, the primary goal of the website is fullfilled.
+The home page serves as the primary point of the call to action, where engaging text attempts to draw in the audience to the call-to-action, which is clicking the play me! button and landing on the page where the users see the animal card grid. Drawing the interest of parents mean a likehood of the website being used for their children. When children tend to use the website on a considerable scale, the primary goal of the website has been considered to be fullfilled.
 
 ## As users, the following would be expected upon visiting the website:
 - I see a pleasant layout with nice contrasting colors.
@@ -29,13 +29,21 @@ I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes w
 
 ## Manual testing
 
-**Expected: The page that displays the bootstrap grid with animal tiles should be responsive and have images that scale properly. The buttons to play the animal sounds should play the sound made by the animal**.  
+**Expected: The page that displays the bootstrap grid with animal tiles should be responsive and have images that scale properly. The buttons to play the animal sounds should play the sound made by the animal**.
 
-Testing result - Upon first viewing the interactive soundbook page of the website, it has been found that the main section pops up above the header, which is a spacing issue. The buttons don't have the level of interactivity as being proposed to the user. 
+Test conducted: 
+- Resize the browser window manually by clicking and dragging the window to different breakpoints, and inspect whether the grid properly displays the cards according to the column units specified for each of the columns. In addition, inspect whether the card images on the bootstrap grid scale properly in terms of width on different breakpoints by applying the same technique. 
+- Play each of the animal sounds on the animal card grid by clicking the button and ensure that the sound is heard.
+
+Testing result: 
+- Upon first viewing the interactive soundbook page of the website, it has been found that the main section pops up above the header, which seems to be an issue with the bootstrap grid itself. 
+- The bootstrap cards do display in a grid with the column layout specified with the classes, but appears to not fit properly within its' container. The primary issue is that the cards spill out of the container and the out of the row.
+- The buttons don't have the level of interactivity as being proposed to the user. 
 
 Fixes
 - Applying margin to the top  of the section, along with applying a z-index value of 0 on the section in the page with the animal tile grid, and a z-index value of 4 on the navbar solved the issue of content overflow. 
-- An audio element has been nested inside the h3 heading of the card body in the bootstrap card. The audio element was resized to fit inside the h3, and will serve as the means to play the sound of the animal in the animal tile grid. It was attempted to play the sounds with a small javascript snippet, but that proved to be out of the scope of the project due to the complexity of getting the script to play all the sounds of the animal, instead of just one. For this reason, the script snippet was removed from the bottom of the body, and the audio element was implemented in its place. The audio elements does the job nicely, and was not too difficult to set up.  
+- An audio element has been nested inside the h3 heading of the card body in the bootstrap card. The audio element was resized to fit inside the h3, and will serve as the means to play the sound of the animal in the animal tile grid. It was attempted to play the sounds with a small javascript snippet, but that proved to be out of the scope of the project due to the complexity of getting the script to play all the sounds of the animal, instead of just one. For this reason, the script snippet was removed from the bottom of the body, and the audio element was implemented in its place. The audio elements does the job nicely, and was not too difficult to set up. 
+- The controls of the audio element has been hidden with a span nested inside the bootstrap card title, and changing the background color of the span to the background of the audio element, which is whitesmoke.
 
 **Expected: The navbar should have nav links that are centered and positioned in the right place, as expected of most websites that users come across. Users are used to the main nav links used to navigate websites on the right side, and the main home link with the logo or wesbite brand to be on the left side, and spaced properly against the left. The navbar should be responsive with font sizes resizing according to the screen width, and collapse on mobile screen sizes in order to allow users to see the nav links by clicking on the burger menu. All links should appear on the navbar accross all pages.**
 
@@ -110,10 +118,6 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 
 
 ## Further fixes
-
-One of the bootstrap cards seem to have unequal heights based on the size of the images. There seems to be a single factor controlling the height of the images. The desirable outcome is for the images on the card to be of equal height irrespective of the breakpoint. 
-
-Issue has been fixed by placing a media query at the 992px breakpoint and applying a minimum height of 200px to the particular card that had unequal height.
 
 - Many redundant styles, inlcuding media queries, were found on the main stylesheet. The styles had minimal, or no effect on the elements, or were duplications of media queries that could have been consolidated into one single media query line. These styles were removed
 
