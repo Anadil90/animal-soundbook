@@ -85,13 +85,21 @@ Fixes:
 **fix**
 - The font size of the button has been reduced to 20px to better fit the small viewport of mobile devices. The font size compliments readability due to the font family being applied globally.
 
-**Expected: The footer links are positioned properly, centered on the middle of the footer. On mobile breakpoint, three main footer links deemed neccessary for the user are visible. On screen sizes bigger than 768px, the sign up link is displayed**
+**Expected: The footer links are positioned properly, centered on the middle of the footer. On mobile breakpoint, three main footer links deemed neccessary for the user are visible. On screen sizes bigger than 768px, the sign up link is displayed. The footer links all open their respective relevant links, such as, home opens home page, about opens about page, and so on.**
+
+**Test conducted**
+- Click all the links and verify whether the link navigates to the proper corresponding page.
+- Inspect the footer and determine whether the href attributes of the footer links are correct.
+
 
 **Testing result**
-- The footer links are off-center and all links try to fit along the footer, which is not the desired outcome. They are also not properly visible on screen size of 320px for mobile, which makes it difficult to see the footer links.
+- The footer links are off-center and all links try to fit along the footer, which is not the desired outcome. They are also not properly visible on screen size of 320px for mobile, which makes it difficult to see the footer links. The footer links all navigate to the wrong pages. None of them take the user to the correct page.
 
 **Fix**
-- The footer links have been centered vertically by using the property align-items:center, and horizontally by using the text-align property. The hierarchy of the links on the footer were not in a fashion that users can easily navigate through the website. The hierarchy has been changed to be first Home, then About and at last Contact for the mobile breakpoint. On screen sizes larger than 768px, the sign up link shows up. On mobile screens, the display of the sign up link is hidden. 
+- The footer links have been centered vertically by using the property align-items:center, and horizontally by using the text-align property. The hierarchy of the links on the footer were not in a fashion that users can easily navigate through the website. 
+- The hierarchy has been changed to be first Home, then About and at last Contact for the mobile breakpoint. On screen sizes larger than 768px, the sign up link shows up. On mobile screens, the display of the sign up link is hidden. 
+- The href attribute of the footer links have been corrected to navigate to the proper links when the user clicks on them.
+- The href attributes of the footer links all had absolute paths to the html documents. This is wrong, and can cause conflicts with page navigation on the deployed site. This has been rectified by ammending the href attribute to point to the relative paths of the documents.
 
 **Expected: The description column on the about page should be readable on all screen widths and be sized accordingly with respect to the screen breakpoints**
 
@@ -128,6 +136,8 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 - A .col-6 style declaration was found in the stylesheet, but this class does not exist anymore. This redundant style declaration has been removed.
 
 - The bootstrap row on the soundbook page has sharp edges that just does not seem to fit in with the view of the webpage. The borders have been rounded to look smoother and look more elegant. This overall affects the look of the page and seems better. The bootstrap row on the soundbook page has been given a custom class name of animal-tile-row, so as to not apply the style to all other pages across the website. On screen sizes up to 575px, a media query has been added to disable the border radius, as the display of the row is better without it, allowing the row to blend in with the background.
+
+- An unused id of id="home" has been found on one of the footer links. This is not at all now neccessary, and therefore has been removed.
 
 ## How to view the project
 
