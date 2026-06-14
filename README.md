@@ -144,10 +144,44 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 
 - The text for the a tag of the sign up page was missing from the tag on the footer across all pages. The text has been added to all the tags of the respective link. This was probably erased while ammending the href attributes of the links.
 
-## How to view the project
+## Deployment and live project viewing ##
+
+### How to view the project ###
 
 Simply go to the link below to see the delpoyed site:
 [Animal Soundbook] (https://anadil90.github.io/animal-soundbook/index.html)
+
+### Development environment and platform ###
+
+The website was primarily developed on a local development environment setting running on linux. Vs code was used as the IDE, due to its extensive offering of extentions that offers great help with the development process. The operating system used for the development environment setup was Ubunbtu 24.04.4 LTS. The folders and files were all stored on the local machine, and were first staged and commited locally, then pushed to a remote repository with git as the version control system.
+
+### Git repository and deployment procedures ###
+A git repository is required to host the files and folders remotely. It serves as a safe point to revert back to a previous version of the development history, in case of a mishap or major issue. The repository for this project was set up by logging on to github and pressing on the + icon and then selecting new repository. On the following page the neccesssary details were filled out and then the remote repository was created by clicking on the create repository button. To learn more about github and the use of repositories, you can go to the following links: 
+[Github repositories] (https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories). 
+[creating a repository] (https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+The project was deployed with github pages, which is a feature of github that allows developers to host a static website developed with HTML, CSS and Javascript for live viewing. The documentation on the following link about github pages can give a clearer idea of how to intitiate a live site with github pages: [Github pages] (https://docs.github.com/en/pages/quickstart)
+
+The steps to create to initiate a git repository on the local machine for staging and deployment were as follows:
+1. A terminal to the project root directory was opened by navigating to view -> Terminal in the navigation menu of vs code. This can also be done with the keyboard shortcut: ctrl + ~.
+2. An empty git repository was initiated by typing in the command git init.
+3. The branch for the project repository was switched to main in order to allow the staged commits to be pushed to the remote respository by using the command: git branch -M main. Main is usually the default branch of the github repository and also the branch from which the live github pages website is deployed.
+4. The remote repository to host the files and folders of the project was added by using the command: git remote add origin <url>, where url is the address of the remote repository. More details about adding remote repositories can be found on the following link below: 
+[Github remote] (https://docs.github.com/en/get-started/git-basics/about-remote-repositories?versionId=free-pro-team%40latest&productId=pages&restPage=quickstart) 
+5. The files to be tracked for adding to the remote repository were added by using the command: git add filename, where filename corresponds to the filename extention of the file, such as index.html. Using the command <git add .> adds all the files and folders on the parent directory of the project.
+6. The added files and folders for staging were prepared for pushing to the remote repository by using the command <git commit -m "message">, where "message" is the message justified for the commit.
+7. The staged code was pushed to the remote repository by using the command <git push -u origin main>, that sets the commits from the local machine to be automatically pointed towards the remote origin link and be pushed to the remote branch. By specifying -u on the command, the branch is set to be tracked automatically with every commit, and easily pushed by simply using the command <git push>
+
+### Pre-requisites ###
+To view the project on your local machine, you will need <vs code> on your computer. The link to download vs code for your operating system platform is given here: [vs code] (https://code.visualstudio.com/). Other than that, you will need a web browser such as Google Chrome, Mozilla Firefox, or Microsoft Edge to launch the website locally on your machine. As this is a static website without interactive javascript elements, you can directly run the website by double clicking on the index.html file without the need for further dependencies.
+
+### Cloning and getting ready to contribute ###
+To start working on the project for further improvements (that you may have in mind), you will need to clone the respository. To do so, you can either do it with the following command: <gh repo clone Anadil90/animal-soundbook>, or use the command to clone with the web url:  <git clone https://github.com/Anadil90/animal-soundbook.git> from the terminal in vs code. Alternatively, you can also download the entire project by clicking on the code button and then the download zip link. You will then need to extract the contents of the zip file into a directory on your computer, such as documents. 
+
+### Branching ###
+The branch for the project repository is main, and therefore the default branch for your local development environment should also be main. It should be noted that as of October 1, 2020, the default branch for all newly created repositories is main, as can be seen here: https://github.blog/changelog/2020-10-01-the-default-branch-for-newly-created-repositories-is-now-main/. 
+
+### Cloning the repository and getting started ###
+
 
 ## User stories:
 
