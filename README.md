@@ -127,6 +127,8 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 
 - A .col-6 style declaration was found in the stylesheet, but this class does not exist anymore. This redundant style declaration has been removed.
 
+- The bootstrap row on the soundbook page has sharp edges that just does not seem to fit in with the view of the webpage. The borders have been rounded to look smoother and look more elegant. This overall affects the look of the page and seems better. The bootstrap row on the soundbook page has been given a custom class name of animal-tile-row, so as to not apply the style to all other pages across the website. On screen sizes up to 575px, a media query has been added to disable the border radius, as the display of the row is better without it, allowing the row to blend in with the background.
+
 ## How to view the project
 
 Simply go to the link below to see the delpoyed site:
