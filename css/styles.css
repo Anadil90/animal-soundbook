@@ -127,18 +127,13 @@ footer {
 
 .card {
     width: 19rem;/*card width matches the content width*/
-    height: 18rem;
+    height: 19rem;
 }
 
-.col-md-6 .card {
-    min-height: 130px;
-    max-height: 250px;
-    /*adjust height accordingly to screen breakpoint*/
-}
-
-.card-img-top {
-    min-height: 6em;
+.card .card-img-top {
+    min-height: 8em;
     min-width: 7em;
+    max-height: 11.5em;
     object-fit: fill;/*fill the image container*/
 }
 
@@ -227,7 +222,7 @@ audio {
 }
 
 /*center animal tiles horizontally along the columns for all breakpoints*/
-.col-md-6, .col-lg-4 {/*center animal tiles along the y axis in the bootstrap column*/
+.animal-tile-column {/*center animal tiles along the y axis in the bootstrap column*/
     display: flex;
     justify-content: center;
 }
@@ -283,7 +278,7 @@ audio {
 /*media queries for the soundbook page*/
 @media screen and (min-width:992px) {
     .card .card-img-top {
-        min-height: 174px;
+        min-height: 8em;
     }
 
     .hide-content {

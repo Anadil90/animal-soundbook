@@ -144,6 +144,8 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 
 - The text for the a tag of the sign up page was missing from the tag on the footer across all pages. The text has been added to all the tags of the respective link. This was probably erased while ammending the href attributes of the links.
 
+- The .col-md-6 and .col-lg-4 classes had a display:flex and justify-content: center property applied to them globally in order for the bootstrap cards on the soundbook page to be centered. But doing so also affected the columns on the home page that has the same class. This caused the content of the row to appear scrambled, as the row in the home page was not originally meant to be flexed. The issue was mitigated by adding a custom class of on the div with the column classes, and then changing the class selector in the stylesheet to the new custom class.
+
 ## Deployment and live project viewing ##
 
 ### How to view the project ###
@@ -165,22 +167,20 @@ The steps to create to initiate a git repository on the local machine for stagin
 1. A terminal to the project root directory was opened by navigating to view -> Terminal in the navigation menu of vs code. This can also be done with the keyboard shortcut: ctrl + ~.
 2. An empty git repository was initiated by typing in the command git init.
 3. The branch for the project repository was switched to main in order to allow the staged commits to be pushed to the remote respository by using the command: git branch -M main. Main is usually the default branch of the github repository and also the branch from which the live github pages website is deployed.
-4. The remote repository to host the files and folders of the project was added by using the command: git remote add origin <url>, where url is the address of the remote repository. More details about adding remote repositories can be found on the following link below: 
+4. The remote repository to host the files and folders of the project was added by using the command: git remote add origin url, where url is the address of the remote repository. More details about adding remote repositories can be found on the following link below: 
 [Github remote] (https://docs.github.com/en/get-started/git-basics/about-remote-repositories?versionId=free-pro-team%40latest&productId=pages&restPage=quickstart) 
-5. The files to be tracked for adding to the remote repository were added by using the command: git add filename, where filename corresponds to the filename extention of the file, such as index.html. Using the command <git add .> adds all the files and folders on the parent directory of the project.
-6. The added files and folders for staging were prepared for pushing to the remote repository by using the command <git commit -m "message">, where "message" is the message justified for the commit.
-7. The staged code was pushed to the remote repository by using the command <git push -u origin main>, that sets the commits from the local machine to be automatically pointed towards the remote origin link and be pushed to the remote branch. By specifying -u on the command, the branch is set to be tracked automatically with every commit, and easily pushed by simply using the command <git push>
+5. The files to be tracked for adding to the remote repository were added by using the command: git add filename, where filename corresponds to the filename extention of the file, such as index.html. Using the command git add . adds all the files and folders on the parent directory of the project.
+6. The added files and folders for staging were prepared for pushing to the remote repository by using the command git commit -m "message", where "message" is the message justified for the commit.
+7. The staged code was pushed to the remote repository by using the command git push -u origin main, that sets the commits from the local machine to be automatically pointed towards the remote origin link and be pushed to the remote branch. By specifying -u on the command, the branch is set to be tracked automatically with every commit, and easily pushed by simply using the command git push
 
 ### Pre-requisites ###
-To view the project on your local machine, you will need <vs code> on your computer. The link to download vs code for your operating system platform is given here: [vs code] (https://code.visualstudio.com/). Other than that, you will need a web browser such as Google Chrome, Mozilla Firefox, or Microsoft Edge to launch the website locally on your machine. As this is a static website without interactive javascript elements, you can directly run the website by double clicking on the index.html file without the need for further dependencies.
+To view the project on your local machine, you will need vs code on your computer. The link to download vs code for your operating system platform is given here: [vs code] (https://code.visualstudio.com/). Other than that, you will need a web browser such as Google Chrome, Mozilla Firefox, or Microsoft Edge to launch the website locally on your machine. As this is a static website without interactive javascript elements, you can directly run the website by double clicking on the index.html file without the need for further dependencies.
 
 ### Cloning and getting ready to contribute ###
-To start working on the project for further improvements (that you may have in mind), you will need to clone the respository. To do so, you can either do it with the following command: <gh repo clone Anadil90/animal-soundbook>, or use the command to clone with the web url:  <git clone https://github.com/Anadil90/animal-soundbook.git> from the terminal in vs code. Alternatively, you can also download the entire project by clicking on the code button and then the download zip link. You will then need to extract the contents of the zip file into a directory on your computer, such as documents. 
+To start working on the project for further improvements (that you may have in mind), you will need to clone the respository. To do so, you can either do it with the following command: gh repo clone Anadil90/animal-soundbook, or use the command to clone with the web url:  git clone https://github.com/Anadil90/animal-soundbook.git from the terminal in vs code. Alternatively, you can also download the entire project by clicking on the code button and then the download zip link. You will then need to extract the contents of the zip file into a directory on your computer, such as documents. 
 
 ### Branching ###
 The branch for the project repository is main, and therefore the default branch for your local development environment should also be main. It should be noted that as of October 1, 2020, the default branch for all newly created repositories is main, as can be seen here: https://github.blog/changelog/2020-10-01-the-default-branch-for-newly-created-repositories-is-now-main/. 
-
-### Cloning the repository and getting started ###
 
 
 ## User stories:
@@ -223,7 +223,3 @@ The wireframe showed here initially was the designed being opted for. Thw wirefr
 ## known issues
 There seems to be a bug on the contact page where the nav link for the sign up page doesen't show up on the home page,
 but does show up when navigating to the about page. The issue could not be resolved and isolated. 
-
-# collaboration
-I am open to collaborate with you. Feel free to go to the repo and clone
-![repo](https://github.com/Anadil90/animal-soundbook)
