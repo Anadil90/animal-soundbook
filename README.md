@@ -125,6 +125,8 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 
 - The property and value align-self:center applied to the images on the home screen are redundant now, because of other properties present to align and space the content on particular breakpoints. It, along with the .description-column style declaration for the columns has been removed.
 
+- A .col-6 style declaration was found in the stylesheet, but this class does not exist anymore. This redundant style declaration has been removed.
+
 ## How to view the project
 
 Simply go to the link below to see the delpoyed site:

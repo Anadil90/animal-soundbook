@@ -139,7 +139,7 @@ footer {
 .card-img-top {
     min-height: 6em;
     min-width: 7em;
-    object-fit: cover;
+    object-fit: fill;/*fill the image container*/
 }
 
 .card-title {
@@ -148,8 +148,6 @@ footer {
     margin: 5px;
     text-align: left;
 }
-
-
 
 .img-caption {
     background-color: aquamarine;
@@ -182,11 +180,6 @@ footer {
 
 button[type=submit] {
     font-size: 30px;
-}
-
-.col-6 {
-    margin-top: 20px;
-    text-align: center;
 }
 
 .main-content {
@@ -232,14 +225,18 @@ audio {
     border-radius: 20px;
 
 }
-/*apply background color to blend in span to hide part of audio element with audio element*/ 
+/*center animal tiles horizontally along the columns for all breakpoints*/
+.col-md-6, .col-lg-4 {/*center animal tiles along the y axis in the bootstrap column*/
+    display: flex;
+    justify-content: center;
+}
 
-.hide-content {
+.hide-content {/*apply background color to blend in span to hide part of audio element with audio element*/
     background-color: whitesmoke;
     width: 60px;
 }
-/*media queries to fix layout issues*/
 
+/*media queries to fix layout issues*/
 @media screen and (max-width:992px) {
 
     /*media queries for screens of up to 992px*/
@@ -342,4 +339,17 @@ audio {
         font-size: 23px;
         font-weight: 600;
     }
+
+    /*fix card layout in mobile screens*/
+    .card-img-top {/*resize card dimensions to fit inside row in mobile devices*/
+        width: 9.3em;
+        height: 9.5em;
+    }
+
+    .card {
+        width: fit-content;/*readjust card width to fit content within border in screens of 320px width*/
+    }
+
+    
+
 }
