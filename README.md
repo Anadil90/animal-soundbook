@@ -70,6 +70,7 @@ Fixes:
 - The columns of the row in the home page has been centered by applying the property and value align-content:center. This gives a more clean and consistent look to the content on laptop and desktop screen sizes, as well as negate the need for an excessive margin on top of the image description heading to push it down.
 - On the breakpoint between 768 and 992px, the columns has been placed accordingly to line with the text by using the align-content property. On the fourth column, which is the column for the description text of the second image a margin of 90px has been added to push down the description text to be level with the image.  
 - A margin of 20px to the top of both the description columns for the images on the home page has been removed from the .description-column style declaration. It is not applicable anymore, as the property row-gap does the work of spacing apart the columns on the row. At this point, the extra spacing needed to be removed. 
+
 **Expected: The nav links should collapse into the hamburger menu at a particular breakpoint in order to prevent the nav links from leaning against the navbar brand link. The nav links collapse down from under the main brand link, so that the user can easily associate the website name with the content. The links are clearly visible with nice contrasting between the navbar background and the nav links.**
 **Testing result**
 - The collapse menu triggers at the wrong breakpoint, therefore making the links close in together at the medium breakpoint, and only triggers at 320px screen size.
@@ -93,13 +94,15 @@ Fixes:
 
 
 **Testing result**
-- The footer links are off-center and all links try to fit along the footer, which is not the desired outcome. They are also not properly visible on screen size of 320px for mobile, which makes it difficult to see the footer links. The footer links all navigate to the wrong pages. None of them take the user to the correct page.
+- The footer links are off-center and all links try to fit along the footer, which is not the desired outcome. They are also not properly visible on screen size of 320px for mobile, which makes it difficult to see the footer links. 
+- The footer links all navigate to the wrong pages. None of them take the user to the correct page.
 
 **Fix**
 - The footer links have been centered vertically by using the property align-items:center, and horizontally by using the text-align property. The hierarchy of the links on the footer were not in a fashion that users can easily navigate through the website. 
 - The hierarchy has been changed to be first Home, then About and at last Contact for the mobile breakpoint. On screen sizes larger than 768px, the sign up link shows up. On mobile screens, the display of the sign up link is hidden. 
 - The href attribute of the footer links have been corrected to navigate to the proper links when the user clicks on them.
 - The href attributes of the footer links all had absolute paths to the html documents. This is wrong, and can cause conflicts with page navigation on the deployed site. This has been rectified by ammending the href attribute to point to the relative paths of the documents.
+
 
 **Expected: The description column on the about page should be readable on all screen widths and be sized accordingly with respect to the screen breakpoints**
 
@@ -138,6 +141,8 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 - The bootstrap row on the soundbook page has sharp edges that just does not seem to fit in with the view of the webpage. The borders have been rounded to look smoother and look more elegant. This overall affects the look of the page and seems better. The bootstrap row on the soundbook page has been given a custom class name of animal-tile-row, so as to not apply the style to all other pages across the website. On screen sizes up to 575px, a media query has been added to disable the border radius, as the display of the row is better without it, allowing the row to blend in with the background.
 
 - An unused id of id="home" has been found on one of the footer links. This is not at all now neccessary, and therefore has been removed.
+
+- The text for the a tag of the sign up page was missing from the tag on the footer across all pages. The text has been added to all the tags of the respective link. This was probably erased while ammending the href attributes of the links.
 
 ## How to view the project
 
