@@ -236,6 +236,30 @@ audio {
     width: 60px;
 }
 
+input[type=text]:valid {
+    background-color: aquamarine;
+}
+
+#email:valid {
+    background-color: aquamarine;
+}
+
+#message:valid {
+    background-color: aquamarine;
+}
+
+input[type=text]:invalid {
+    border: 2px solid red;
+}
+
+#email:invalid {
+    border: 2px solid red;
+}
+
+#message:invalid {
+    border: 2px solid red;
+}
+
 /*media queries to fix layout issues*/
 @media screen and (max-width:992px) {
 
