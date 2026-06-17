@@ -46,11 +46,11 @@
             <form class="row g-2">
                     <div class="col-lg-4">
                         <label for="first-name" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="first-name" placeholder="Enter your first name" required>
+                        <input type="text" class="form-control" id="first-name" placeholder="Enter your first name" minlength="3" required>
                     </div>
                     <div class="col-lg-4">
                         <label for="last-name" class="form-label">Last name</label>
-                        <input type="text" class="form-control" id="last name" placeholder="Enter your last name" required>
+                        <input type="text" class="form-control" id="last name" placeholder="Enter your last name" minlength="3" required>
                     </div>
 
                     <div class="col-lg-4">
@@ -60,7 +60,9 @@
 
                    <div class="col-lg-4">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="A unique password that is not easy to guess" required>
+                        <input type="password" class="form-control" id="password" placeholder="A unique password that is not easy to guess" minlength="8"
+                        required
+                        >
                     </div>
 
                     <div class="col-12">

@@ -174,7 +174,7 @@ The steps to create to initiate a git repository on the local machine for stagin
 7. The staged code was pushed to the remote repository by using the command git push -u origin main, that sets the commits from the local machine to be automatically pointed towards the remote origin link and be pushed to the remote branch. By specifying -u on the command, the branch is set to be tracked automatically with every commit, and easily pushed by simply using the command git push
 
 ### Pre-requisites ###
-To view the project on your local machine, you will need vs code on your computer. The link to download vs code for your operating system platform is given here: [vs code] (https://code.visualstudio.com/). Other than that, you will need a web browser such as Google Chrome, Mozilla Firefox, or Microsoft Edge to launch the website locally on your machine. As this is a static website without interactive javascript elements, you can directly run the website by double clicking on the index.html file without the need for further dependencies.
+To view the project on your local machine, you will need vs code on your computer. The link to download vs code for your operating system platform is given here: [vs code] (https://code.visualstudio.com/). Other than that, you will need a web browser such as Google Chrome, Mozilla Firefox, or Microsoft Edge to launch the website locally on your machine. As this is a static website without interactive javascript elements, it is possible to  directly run the website by double clicking on the index.html file without the need for further dependencies. However, the recommended way to live view the website while working on the codebase is to use the extention live server by Ritwick Dey. You can install the extention by going to the extentions menu on the left side (the icon with the four square tiles with one broken off). This extention allows you to automatically reload the integrated browser on vs code when the code changes, allowing for a smoother workflow. The extention will show up first when you search for it on the extentions menu. 
 
 ### Cloning and getting ready to contribute ###
 To start working on the project for further improvements (that you may have in mind), you will need to clone the respository. To do so, you can either do it with the following command: gh repo clone Anadil90/animal-soundbook, or use the command to clone with the web url:  git clone https://github.com/Anadil90/animal-soundbook.git from the terminal in vs code. Alternatively, you can also download the entire project by clicking on the code button and then the download zip link. You will then need to extract the contents of the zip file into a directory on your computer, such as documents. 
@@ -186,14 +186,23 @@ The branch for the project repository is main, and therefore the default branch 
 ## User stories:
 
 ![user story 1](./user%20stories/Screenshot%20from%202026-05-29%2001-20-33.png)
+As a user of the website for the first time, I expect the webiste to be easily navigable and for it to be responsive across all devices. The information I am looking for should be quickly found without any frustations.
 
+The user story has been met by implementing a simple easy to follow navigation heirarchy, as well as applying proper styling and media queries for the responsiveness of the website accross most common and  major breakpoints.  
 ![user story 2](./user%20stories/Screenshot%20from%202026-05-29%2001-23-05.png)
+Upon clicking the let's play button, I expect a board with rows and columns of animal images that display nicely.
+
+The user story has been met, with the bootstrap grid displaying the animal tiles nicely, and are responsive on various screen sizes.
 
 ![user story 3](./user%20stories/Screenshot%20from%202026-05-29%2001-24-52.png)
-This user story was a could have, but could not be implemented due to the scope of the project. This is better suited for javascript, where interactivity is key. A workaround to that would have involved more time, particularly in sourcing actual proper sound files in the form of wavs.
+The animal cards contain a button to play the sound of the animal
+
+This user story involved at one point implementing a minimum amount of javascript of a few lines in order to play the sounds. This actually roved to be counteractive, as the high level of javascript knowledge required to pull it off left a lot of unclear and vague ideas of how  to actually get the job done. The humble audio element, in the end proved to be far more suitable for the task of playing the animal sounds, and was implemented.
 
 ![user story 4](./user%20stories/Screenshot%20from%202026-05-29%2003-28-51.png)
+When I go to the website, it is easy for the eyes on me, I can see the text clearly. The text draws me in and gives a good feeling overall to go through the site.
 
+The user story was met with typography to grab the attention of young children, through research into what colors primarily attracts them and helps them to concentrate. This is actually still an ongoing research on part of the developer to finely pinpoint the relation of typography choices with the efficacy of learning in children.
 
 ## Automatic testing
 
@@ -213,13 +222,19 @@ testing the pages showed that they were mostly clean, except for warning message
 ## Lighthouse testing
 
 ![lighthouse test](./Lighthouse%20testing/Screenshot%20from%202026-05-29%2004-07-49.png)
-The test revealed that a few things can be done to improve page load speed, but on the accessibility side, it seems to fear good.
+The test revealed that a few things can be done to improve page load speed, but on the accessibility side, it seems to fare good.
 
 ## wireframes
 
-The wireframe showed here initially was the designed being opted for. Thw wireframe helped to draw out the rough sketch in terms of what the website can look like. It was drawn by hand on a magnetic ink sketch board.
+The wireframe showed here initially was the designed being opted for. Thw wireframe helped to draw out the rough sketch in terms of what the website can look like. It was drawn by hand on a magnetic ink sketch board and then adopted on paper. 
 ![wireframe](./wireframe/wireframe%20sketch.jpeg)
 
 ## known issues
-There seems to be a bug on the contact page where the nav link for the sign up page doesen't show up on the home page,
-but does show up when navigating to the about page. The issue could not be resolved and isolated. 
+The sounds of the animals play synchronous to each other. This means that when one anial sound is played, another can also be played at the same time. There is nothing much that can be done about this behavior at this stage of the development of the website, as mitigating the issue means resorting to javascript, which is out of the project scope. This issue however, will be resolved in the future release of the website, along with the other desired features being implemented. As the core functionality of the website is delivered, this issue can be considered to be minor at this point.
+
+## Desired features of the website for the future ##
+While this initial version of the website gives a taste of what can the users be offered, there remains room for some features that would be desirable, which are outlined below:
+- sections for multiple categories of objects for children to learn, such as vehicles, fruits, vegetables, food items, etc. This idea stems from a childrens flip soundbook by Vtech. 
+- A short video clip of the animal belonging to an animal tile is played when the user hovers over the animal tile. This feature requires selecting the card-img-top of the bootstrap cards in the DOM and then placing a video element on top of the card image for that paricular event.
+- A choice of themes to apply to change the appearance of the website, to better suit the color preferences of the user. This can be a choice of three major themes in the forms of dark with contrast, light with focus, and balanced with asthetically pleasing background.
+It should be noted that these are pre-eliminary ideas that may evolve over time, or may be adopted in a slightly different way than as defined here. 
