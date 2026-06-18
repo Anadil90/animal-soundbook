@@ -21,7 +21,7 @@ The home page serves as the primary point of the call to action, where engaging 
 
 
 ## Typography choices
-Upon research, i have found that children are attracted towards bright colours like red, orange and yellow, which utlimately increases a child's attention to detail. Based on this i have decided to go with a sort of a sunburst color #FFD34E for the background of the Bootstrap cards. This color, i feel, contrasts nicely with the color of #FFF2D9, which is basically a cream white color. For the background color of the body, the color #F1C40F has been chosen. For the border of the cards, the color #6CB4EE has been applied for a subtle contrast between the background and the cards, giving a more tactile look to the cards. For the header the color burlywood has been utlized to serve as an element of seperation from the background. The blackfonts are easy to read with this color for header background.
+Upon research, I have found that children are attracted towards bright colours like red, orange and yellow, which utlimately increases a child's attention to detail. Based on this I have decided to go with a sort of a sunburst color #FFD34E for the background of the Bootstrap cards. This color, I feel, contrasts nicely with the color of #FFF2D9, which is basically a cream white color. For the background color of the body, the color #F1C40F has been chosen. For the border of the cards, the color #6CB4EE has been applied for a subtle contrast between the background and the cards, giving a more tactile look to the cards. For the header the color burlywood has been utlized to serve as an element of seperation from the background. The blackfonts are easy to read with this color for header background.
 
 I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes with Hex Codes & AI Design Examples] (https://www.media.io/color-palette/kids-color-palette.html)
 
@@ -31,7 +31,7 @@ I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes w
 
 **Expected: The page that displays the bootstrap grid with animal tiles should be responsive and have images that scale properly. The buttons to play the animal sounds should play the sound made by the animal**.
 
-Test conducted: 
+Tests conducted: 
 - Resize the browser window manually by clicking and dragging the window to different breakpoints, and inspect whether the grid properly displays the cards according to the column units specified for each of the columns. In addition, inspect whether the card images on the bootstrap grid scale properly in terms of width on different breakpoints by applying the same technique. 
 - Play each of the animal sounds on the animal card grid by clicking the button and ensure that the sound is heard.
 
@@ -47,11 +47,23 @@ Fixes
 
 **Expected: The navbar should have nav links that are centered and positioned in the right place, as expected of most websites that users come across. Users are used to the main nav links used to navigate websites on the right side, and the main home link with the logo or wesbite brand to be on the left side, and spaced properly against the left. The navbar should be responsive with font sizes resizing according to the screen width, and collapse on mobile screen sizes in order to allow users to see the nav links by clicking on the burger menu. All links should appear on the navbar accross all pages.**
 
+Tests conducted - 
+- Inspect the navbar element with dev tools of the web browser to determine the position and spacing of the nav links.
+- Resize the browser window to see whether the nav links resize according to the screen width.
+- Determine whether the navbar collapse menu is triggered in screen sizes of below 768px by dragging the browser window.
+- Use the device toolbar of the browser dev tools to trigger mobile screen breakpoints of 320px, 375px, and 425px to examine whether the collapse menu can be seen on these breakpoints.
+- Click on the burger menu and ensure that the nav links drops down from the top, and that the links can be easily read.
+- Navigate to each page and make sure that the nav links show up on the navbar on all of the pages.
+
 Testing result - On mobile screen sizes of 320px, it has been found that the navbar simply overflows to the top of it. The font sizes don't scale according to screen width, and the nav links are not spaced and placed accordingly. The main nav links are in the middle of the nav element instead of the right. The brand link is not spaced against the left. Clicking on the hamburger menu does not perform any action. Therefore, it is non functional on mobile screen sizes. The nav link for the signup page does not show up on the home page and the contact page. The nav links are too big on mobile and tablet screen sizes.
 
 Fixes - Upon examining the pages, it has been found that the nav-link for the signup page was missing. Issue has been resolved by placing the respective link in the pages. The nav links have been vertically centered by applying the vertical-alignment property, and the main nav links have been moved to the right of the navbar by applying the align-items property. The navbar brand link has also been centered by using the vertical-alignment property as used for the nav links, and in addition, a margin of 40px has been applied to move the brand link away from the horizontal start axis of the navbar. The brand link being too close to the start axis was logged as being an issue of distraction for the user. The same applies for the nav links being in the center instead of the right. Font size of the nav links and the brand link up until the 768px breakpoint is too big, and has been reduced to 26px. Upon a closer look, it has been determined that the cdn links to bootstrap in the link tags on the head of all pages except the soundbook.html page were pointed to bootstrap version 5.3.3. This version of bootstrap causes issues when attempting to collapse the navbar. placing the cdn link to bootstrap 5.3.8 solved the issue of the navbar hamburger button not triggering the dropdown for the nav links on mobile screen sizes. The button now successfully triggers the drop down menu and shows the nav links.
 
 **Expected: The images and text on the home page should resize and fit in their columns fluidly, so as to represent responsive design. This should be according to the respective breakpoints accross various devices. The images should have an aspect ratio similar or close to that of each other, so that they are able to be resized nicely.**
+
+Tests conducted - 
+- Resize the browser window manually and determine if the images and text on the bootstrap columns resize in accordance to the main breakpoints for mobile, tablet, laptop and desktop screens.
+- Inspect and ensure that the images are of the same widths, and resize accordingly in respect to the screen sizes.
 
 * Testing result: 
 
@@ -72,6 +84,9 @@ Fixes:
 - A margin of 20px to the top of both the description columns for the images on the home page has been removed from the .description-column style declaration. It is not applicable anymore, as the property row-gap does the work of spacing apart the columns on the row. At this point, the extra spacing needed to be removed. 
 
 **Expected: The nav links should collapse into the hamburger menu at a particular breakpoint in order to prevent the nav links from leaning against the navbar brand link. The nav links collapse down from under the main brand link, so that the user can easily associate the website name with the content. The links are clearly visible with nice contrasting between the navbar background and the nav links.**
+
+Tests Conducted - 
+
 **Testing result**
 - The collapse menu triggers at the wrong breakpoint, therefore making the links close in together at the medium breakpoint, and only triggers at 320px screen size.
 - The white background of the navbar is not so nicely contrasted with the color of the nav links
