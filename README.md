@@ -185,21 +185,21 @@ The branch for the project repository is main, and therefore the default branch 
 
 ## User stories:
 
-![user story 1](./user%20stories/Screenshot%20from%202026-05-29%2001-20-33.png)
+![user story 1](./user_stories/user-story1.png.png)
 As a user of the website for the first time, I expect the webiste to be easily navigable and for it to be responsive across all devices. The information I am looking for should be quickly found without any frustations.
 
 The user story has been met by implementing a simple easy to follow navigation heirarchy, as well as applying proper styling and media queries for the responsiveness of the website accross most common and  major breakpoints.  
-![user story 2](./user%20stories/Screenshot%20from%202026-05-29%2001-23-05.png)
+![user story 2](./user_stories/user-story2.png)
 Upon clicking the let's play button, I expect a board with rows and columns of animal images that display nicely.
 
 The user story has been met, with the bootstrap grid displaying the animal tiles nicely, and are responsive on various screen sizes.
 
-![user story 3](./user%20stories/Screenshot%20from%202026-05-29%2001-24-52.png)
+![user story 3](./user_stories/user-story3.png)
 The animal cards contain a button to play the sound of the animal
 
 This user story involved at one point implementing a minimum amount of javascript of a few lines in order to play the sounds. This actually roved to be counteractive, as the high level of javascript knowledge required to pull it off left a lot of unclear and vague ideas of how  to actually get the job done. The humble audio element, in the end proved to be far more suitable for the task of playing the animal sounds, and was implemented.
 
-![user story 4](./user%20stories/Screenshot%20from%202026-05-29%2003-28-51.png)
+![user story 4](./user_stories/user-story4.png)
 When I go to the website, it is easy for the eyes on me, I can see the text clearly. The text draws me in and gives a good feeling overall to go through the site.
 
 The user story was met with typography to grab the attention of young children, through research into what colors primarily attracts them and helps them to concentrate. This is actually still an ongoing research on part of the developer to finely pinpoint the relation of typography choices with the efficacy of learning in children.
@@ -227,7 +227,7 @@ The test revealed that a few things can be done to improve page load speed, but 
 ## wireframes
 
 The wireframe showed here initially was the designed being opted for. Thw wireframe helped to draw out the rough sketch in terms of what the website can look like. It was drawn by hand on a magnetic ink sketch board and then adopted on paper. 
-![wireframe](./wireframe/wireframe%20sketch.jpeg)
+![wireframe](./wireframe/wireframe-sketch.jpeg)
 
 ## known issues
 The sounds of the animals play synchronous to each other. This means that when one anial sound is played, another can also be played at the same time. There is nothing much that can be done about this behavior at this stage of the development of the website, as mitigating the issue means resorting to javascript, which is out of the project scope. This issue however, will be resolved in the future release of the website, along with the other desired features being implemented. As the core functionality of the website is delivered, this issue can be considered to be minor at this point.
