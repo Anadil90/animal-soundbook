@@ -211,13 +211,13 @@ HTML validation:
 testing the pages showed that they were mostly clean, except for warning messages on the contact and signup pages.
 
 ### home page
-![home page test](./testing/Screenshot%20from%202026-05-29%2003-12-44.png)
+![home page test](./testing/html-validator-test-home-page.png.png)
 
-![about page test](./testing/Screenshot%20from%202026-05-29%2003-13-44.png)
+![about page test](./testing/html-validator-test-about-page.png.png)
 
-![contact page test](./testing/Screenshot%20from%202026-05-29%2003-20-07.png)
+![contact page test](./testing/html-validator-test-contact-page.png.png)
 
-![signup page test](./testing/Screenshot%20from%202026-05-29%2003-20-35.png)
+![signup page test](./testing/html-validator-test-signup-page.png.png)
 
 ## Lighthouse testing
 
