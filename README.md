@@ -180,7 +180,7 @@ To view the project on your local machine, you will need vs code on your compute
 To start working on the project for further improvements (that you may have in mind), you will need to clone the respository. To do so, you can either do it with the following command: gh repo clone Anadil90/animal-soundbook, or use the command to clone with the web url:  git clone https://github.com/Anadil90/animal-soundbook.git from the terminal in vs code. Alternatively, you can also download the entire project by clicking on the code button and then the download zip link. You will then need to extract the contents of the zip file into a directory on your computer, such as documents. 
 
 ### Branching ###
-The branch for the project repository is main, and therefore the default branch for your local development environment should also be main. It should be noted that as of October 1, 2020, the default branch for all newly created repositories is main, as can be seen here: https://github.blog/changelog/2020-10-01-the-default-branch-for-newly-created-repositories-is-now-main/. 
+The branch for the project repository is main, and therefore the default branch for your local development environment should also be main. It should be noted that as of October 1, 2020, the default branch for all newly created repositories is main, as can be seen here: https://github.blog/changelog/2020-10-01-the-default-branch-for-newly-created-repositories-is-now-main/. Therefore, the expected branch for most projects now would be main, instead of the default master branch as was before October 1, 2020.
 
 
 ## User stories:
@@ -221,7 +221,7 @@ testing the pages showed that they were mostly clean, except for warning message
 
 ## Lighthouse testing
 
-![lighthouse test](./Lighthouse%20testing/Screenshot%20from%202026-05-29%2004-07-49.png)
+![lighthouse test](./Lighthouse%20testing/lighthouse-testing-result.png)
 The test revealed that a few things can be done to improve page load speed, but on the accessibility side, it seems to fare good.
 
 ## wireframes
