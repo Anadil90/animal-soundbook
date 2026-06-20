@@ -55,7 +55,7 @@ Fixes
 
 Tests conducted - 
 - Inspect the navbar element with dev tools of the web browser to determine the position and spacing of the nav links.
-- Resize the browser window to see whether the nav links resize according to the screen width.
+- Resize the browser window to see whether the nav links are readable and of the right size according to the different screen sizes.
 - Determine whether the navbar collapse menu is triggered in screen sizes of below 768px by dragging the browser window.
 - Use the device toolbar of the browser dev tools to trigger mobile screen breakpoints of 320px, 375px, and 425px to examine whether the collapse menu can be seen on these breakpoints.
 - Inspect the head of all the html documents for typos, missing closing tags or incorrect cdn links. 
@@ -63,7 +63,8 @@ Tests conducted -
 - Navigate to each page and make sure that the nav links show up on the navbar on all of the pages.
 
 Testing result - 
-- On mobile screen sizes of 320px, it has been found that the navbar simply overflows to the top of it. The font sizes don't scale according to screen width, and the nav links are not spaced and placed accordingly. 
+- On mobile screen sizes of 320px, it has been found that the navbar simply overflows to the top of it.  
+- The nav links are not spaced and placed accordingly. 
 - The collapse menu triggers at the wrong breakpoint, therefore making the links close in together at the medium breakpoint, and only triggers at 320px screen size.
 - The white background of the navbar is not so nicely contrasted with the color of the nav links
 - The nav links drop down from under the navabar brand link, but its stretched to the full width of its container #navbarSupportedContent, making the active class apply the border to the full width. This display is not desirable. 
@@ -75,12 +76,13 @@ Testing result -
 - Upon a closer look, it has been found that the cdn links to bootstrap in the link tags on the head of all pages except the soundbook.html page were pointed to bootstrap version 5.3.3. This version of bootstrap causes issues when attempting to collapse the navbar.
 
 Fixes - 
-- Upon examining the pages, it has been found that the nav-link for the signup page was missing. Issue has been resolved by placing the respective link in the pages. 
+- Upon examining the pages, it has been found that the nav-link element for the signup page was missing. Issue has been resolved by placing the respective link in the pages. 
 - The nav element of all pages had a class of .navbar-expand-sm. This was the wrong class, making it trigger the navbar hamburger menu only at the small screen(320px) size. This has been changed to .navbar-expand-md to collapse at the 768px breakpoint.
 - Width of the nav links have been reduced by setting the property and value width:fit-content to the .nav-item class in the stylesheet. Background color of aliceblue has been applied to the #navbarSupportedContent container to contrast the nav links better for viewability.
 - The nav links have been vertically centered by applying the vertical-alignment property, and the main nav links have been moved to the right of the navbar by applying the align-items property. 
 - The navbar brand link has also been centered by using the vertical-alignment property as used for the nav links, and in addition, a margin of 40px has been applied to move the brand link away from the horizontal start axis of the navbar. The brand link being too close to the start axis was logged as being an issue of distraction for the user. The same applies for the nav links being in the center instead of the right. 
-- A global font size of 1.8rem has been set for the body that accomodates the mobile screens nicely, and also is large enough to be discerned on the medium and large screen breakpoints.   
+- A global font size of 1.8rem has been set for the body that accomodates the mobile screens nicely, and also is large enough to be discerned on the medium and large screen breakpoints. The website has been tested on a Samsung Galaxy A16 phone, as well as a Lenovo Tab P12 tablet device in addition to the device toolbar and manual browser window resizing. On the Galaxy A16, the global font size of 1.8rem is perfectly readable and makes the font family caveat look quite nice. On the Lenovo Tab P12, the font size of 1.8rem is clearly readable and also seems perfectly suited for the screen size in terms of readability. On the desktop and laptop sizes, it holds up fine, allowing for good viewability of the nav links without difficulty. Owing to this, can be deemed that the global font size is able to cater to the major screen sizes and further media queries to resize the nav links is not neccessary. 
+   
 - The cdn link to bootstrap has been changed to bootstrap 5.3.8 to solve the issue of the navbar hamburger button not triggering the dropdown for the nav links on mobile screen sizes. The button now successfully triggers the drop down menu and shows the nav links.
 
 **Expected:** 
@@ -91,8 +93,7 @@ Tests conducted -
 - Resize the browser window manually and determine if the images and text on the bootstrap columns resize in accordance to the main breakpoints for mobile, tablet, laptop and desktop screens.
 - Inspect and ensure that the images are of the same widths, and resize accordingly in respect to the screen sizes.
 
-* Testing result: 
-
+Testing result -
 - Sizing of the images and their description text on the home page is garbled and does not represent the proper layout expected of responsive sizing on mobile screens. Font sizes do not resize accordingly to fit in their columns when the browser window is resized to smaller widths, making the text distracting to read, as well as obtrusive and oversized. 
 - Font sizing is not uniform across different screen widths. 
 - The first image next to the description text is too high and not too wide. This makes it look non-uniform as compared to the aspect ratio of the other image below on the third column. 
@@ -112,11 +113,14 @@ Fixes:
 **Expected:**
 - The call to action button on the home page should be resize accordingly when the mobile and tablet screen breakpoint has been triggered.
 
+**Test conducted**
+- Resize the browser window and determine whether the call to action button is of the proper size according to the viewport size.
+
 **Testing result**
 - Button is same size as it is in the other breakpoints for larger screens. 
 
 **fix**
-- The font size of the button has been reduced to 20px to better fit the small viewport of mobile devices. The font size compliments readability due to the font family being applied globally.
+- The font size of the button has been reduced to 20px to better fit the small viewport of mobile devices and medium screen size devices, such as tablets. The font size compliments readability due to the font family being applied globally. On screen sizes larger than 768px, and screens of up to maximum of 992px, the font size of 23px has been applied to the cta button, as it compliments the sizing of the text content in the page. The default font size of 27px is applied on breakpoints larger than 992px, due to the media query specified up to a maximum of 992px. 
 
 **Expected:**
 - The footer links are positioned properly, centered on the middle of the footer. On mobile breakpoint, three main footer links deemed neccessary for the user are visible. 

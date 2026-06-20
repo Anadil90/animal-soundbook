@@ -258,9 +258,8 @@ input[type=text]:invalid {
 }
 
 /*media queries to fix layout issues*/
-@media screen and (max-width:992px) {
-
-    /*media queries for screens of up to 992px*/
+@media screen and (max-width:992px) {/*media queries for screens of up to 992px*/
+    /*media queries for the home page*/
     #image-description-2 {
         /*align the paragraph with the image*/
         margin-top: 90px;
@@ -281,6 +280,10 @@ input[type=text]:invalid {
         margin: 20px 0;
     }
 
+    .call-to-action {/*resize cta button to add a more uniform look to the home page overall, and avoid distracting the user too much.*/
+        font-size: 23px;
+    }
+
     /*media queries for the soundbook page*/
     .hide-content {
         font-size: 25px;
@@ -297,7 +300,7 @@ input[type=text]:invalid {
 }
 
 /*media queries for the soundbook page*/
-@media screen and (min-width:992px) {
+@media screen and (min-width:992px) {/*media queries for screens of 992px and higher*/
     .card .card-img-top {
         min-height: 8em;
     }
