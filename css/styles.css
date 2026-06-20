@@ -187,7 +187,7 @@ button[type=submit] {
     /*push the section down and center it*/
     margin: 135px 0;
     text-align: justify;
-    font-size: 1.2rem;
+    font-size: 1.5rem; /*default for small screen sizes*/
 }
 
 /*soundbook page styles*/
@@ -326,8 +326,7 @@ input[type=text]:invalid {
     #image-description-2 {
         /*reduce gap between paragraph and heading text*/
         margin: 5px 0;
-        font-size: 1.2rem;
-        /*decrease font size of paragraphs for small and medium screens*/
+        font-size: 1.2rem;/*decrease font size of paragraphs for small and medium screens*/
     }
 
     .navbar-brand {

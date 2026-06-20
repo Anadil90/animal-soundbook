@@ -187,6 +187,8 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 
 - An extra style declaration for the body was found to apply global font size to the body. There is already a main declaration for the body styles, which makes two declarations for the body. This font size property for the duplicate body style declaration has been moved to the main body style declaration and the duplicate declaration below it has been removed.
 
+- The font size of the about paragraph in the about page is the same size globally, as well as on the media query breakpoint of between 320px and 768px for mobile and tablet devices. This is a improper style application, and is causing the about paragraph to be too small on medium sized devices and devices with larger screens. The global font size for the about paragraph has been changed to 1.5rem for better viewability. The font size now scales from larger to smaller, which is the desired output.
+
 ## Deployment and live project viewing ##
 
 ### How to view the project ###
