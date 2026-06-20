@@ -29,7 +29,9 @@ I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes w
 
 ## Manual testing
 
-**Expected: The page that displays the bootstrap grid with animal tiles should be responsive and have images that scale properly. The buttons to play the animal sounds should play the sound made by the animal**.
+**Expected:** 
+- The page that displays the bootstrap grid with animal tiles should be responsive and have images that scale properly. 
+- The buttons to play the animal sounds should play the sound made by the animal.
 
 Tests conducted: 
 - Resize the browser window manually by clicking and dragging the window to different breakpoints, and inspect whether the grid properly displays the cards according to the column units specified for each of the columns. In addition, inspect whether the card images on the bootstrap grid scale properly in terms of width on different breakpoints by applying the same technique. 
@@ -45,21 +47,45 @@ Fixes
 - An audio element has been nested inside the h3 heading of the card body in the bootstrap card. The audio element was resized to fit inside the h3, and will serve as the means to play the sound of the animal in the animal tile grid. It was attempted to play the sounds with a small javascript snippet, but that proved to be out of the scope of the project due to the complexity of getting the script to play all the sounds of the animal, instead of just one. For this reason, the script snippet was removed from the bottom of the body, and the audio element was implemented in its place. The audio elements does the job nicely, and was not too difficult to set up. 
 - The controls of the audio element has been hidden with a span nested inside the bootstrap card title, and changing the background color of the span to the background of the audio element, which is whitesmoke.
 
-**Expected: The navbar should have nav links that are centered and positioned in the right place, as expected of most websites that users come across. Users are used to the main nav links used to navigate websites on the right side, and the main home link with the logo or wesbite brand to be on the left side, and spaced properly against the left. The navbar should be responsive with font sizes resizing according to the screen width, and collapse on mobile screen sizes in order to allow users to see the nav links by clicking on the burger menu. All links should appear on the navbar accross all pages.**
+**Expected:**
+- The navbar should have nav links that are centered and positioned in the right place, as expected of most websites that users come across. Users are used to the main nav links used to navigate websites on the right side, and the main home link with the logo or wesbite brand to be on the left side, and spaced properly against the left. 
+- The navbar should be responsive with font sizes resizing according to the screen width, and collapse on mobile screen sizes in order to allow users to see the nav links by clicking on the burger menu. 
+- The nav links collapse down from under the main brand link, so that the user can easily associate the website name with the content. The links are clearly visible with nice contrasting between the navbar background and the nav links. 
+- All nav links appear on the navbar accross all pages.**
 
 Tests conducted - 
 - Inspect the navbar element with dev tools of the web browser to determine the position and spacing of the nav links.
 - Resize the browser window to see whether the nav links resize according to the screen width.
 - Determine whether the navbar collapse menu is triggered in screen sizes of below 768px by dragging the browser window.
 - Use the device toolbar of the browser dev tools to trigger mobile screen breakpoints of 320px, 375px, and 425px to examine whether the collapse menu can be seen on these breakpoints.
+- Inspect the head of all the html documents for typos, missing closing tags or incorrect cdn links. 
 - Click on the burger menu and ensure that the nav links drops down from the top, and that the links can be easily read.
 - Navigate to each page and make sure that the nav links show up on the navbar on all of the pages.
 
-Testing result - On mobile screen sizes of 320px, it has been found that the navbar simply overflows to the top of it. The font sizes don't scale according to screen width, and the nav links are not spaced and placed accordingly. The main nav links are in the middle of the nav element instead of the right. The brand link is not spaced against the left. Clicking on the hamburger menu does not perform any action. Therefore, it is non functional on mobile screen sizes. The nav link for the signup page does not show up on the home page and the contact page. The nav links are too big on mobile and tablet screen sizes.
+Testing result - 
+- On mobile screen sizes of 320px, it has been found that the navbar simply overflows to the top of it. The font sizes don't scale according to screen width, and the nav links are not spaced and placed accordingly. 
+- The collapse menu triggers at the wrong breakpoint, therefore making the links close in together at the medium breakpoint, and only triggers at 320px screen size.
+- The white background of the navbar is not so nicely contrasted with the color of the nav links
+- The nav links drop down from under the navabar brand link, but its stretched to the full width of its container #navbarSupportedContent, making the active class apply the border to the full width. This display is not desirable. 
+- The main nav links are in the middle of the nav element instead of the right. 
+- The brand link is not spaced against the left. 
+- Clicking on the hamburger menu does not perform any action. Therefore, it is non functional on mobile screen sizes. 
+- The nav link for the signup page does not show up on the home page and the contact page. 
+- The nav links are too big on mobile and tablet screen sizes.
+- Upon a closer look, it has been found that the cdn links to bootstrap in the link tags on the head of all pages except the soundbook.html page were pointed to bootstrap version 5.3.3. This version of bootstrap causes issues when attempting to collapse the navbar.
 
-Fixes - Upon examining the pages, it has been found that the nav-link for the signup page was missing. Issue has been resolved by placing the respective link in the pages. The nav links have been vertically centered by applying the vertical-alignment property, and the main nav links have been moved to the right of the navbar by applying the align-items property. The navbar brand link has also been centered by using the vertical-alignment property as used for the nav links, and in addition, a margin of 40px has been applied to move the brand link away from the horizontal start axis of the navbar. The brand link being too close to the start axis was logged as being an issue of distraction for the user. The same applies for the nav links being in the center instead of the right. Font size of the nav links and the brand link up until the 768px breakpoint is too big, and has been reduced to 26px. Upon a closer look, it has been determined that the cdn links to bootstrap in the link tags on the head of all pages except the soundbook.html page were pointed to bootstrap version 5.3.3. This version of bootstrap causes issues when attempting to collapse the navbar. placing the cdn link to bootstrap 5.3.8 solved the issue of the navbar hamburger button not triggering the dropdown for the nav links on mobile screen sizes. The button now successfully triggers the drop down menu and shows the nav links.
+Fixes - 
+- Upon examining the pages, it has been found that the nav-link for the signup page was missing. Issue has been resolved by placing the respective link in the pages. 
+- The nav element of all pages had a class of .navbar-expand-sm. This was the wrong class, making it trigger the navbar hamburger menu only at the small screen(320px) size. This has been changed to .navbar-expand-md to collapse at the 768px breakpoint.
+- Width of the nav links have been reduced by setting the property and value width:fit-content to the .nav-item class in the stylesheet. Background color of aliceblue has been applied to the #navbarSupportedContent container to contrast the nav links better for viewability.
+- The nav links have been vertically centered by applying the vertical-alignment property, and the main nav links have been moved to the right of the navbar by applying the align-items property. 
+- The navbar brand link has also been centered by using the vertical-alignment property as used for the nav links, and in addition, a margin of 40px has been applied to move the brand link away from the horizontal start axis of the navbar. The brand link being too close to the start axis was logged as being an issue of distraction for the user. The same applies for the nav links being in the center instead of the right. 
+- A global font size of 1.8rem has been set for the body that accomodates the mobile screens nicely, and also is large enough to be discerned on the medium and large screen breakpoints.   
+- The cdn link to bootstrap has been changed to bootstrap 5.3.8 to solve the issue of the navbar hamburger button not triggering the dropdown for the nav links on mobile screen sizes. The button now successfully triggers the drop down menu and shows the nav links.
 
-**Expected: The images and text on the home page should resize and fit in their columns fluidly, so as to represent responsive design. This should be according to the respective breakpoints accross various devices. The images should have an aspect ratio similar or close to that of each other, so that they are able to be resized nicely.**
+**Expected:** 
+- The images and text on the home page should resize and fit in their columns fluidly, so as to represent responsive design. This should be according to the respective breakpoints across various devices. 
+- The images should have an aspect ratio similar or close to that of each other, so that they are able to be resized nicely.**
 
 Tests conducted - 
 - Resize the browser window manually and determine if the images and text on the bootstrap columns resize in accordance to the main breakpoints for mobile, tablet, laptop and desktop screens.
@@ -83,25 +109,19 @@ Fixes:
 - On the breakpoint between 768 and 992px, the columns has been placed accordingly to line with the text by using the align-content property. On the fourth column, which is the column for the description text of the second image a margin of 90px has been added to push down the description text to be level with the image.  
 - A margin of 20px to the top of both the description columns for the images on the home page has been removed from the .description-column style declaration. It is not applicable anymore, as the property row-gap does the work of spacing apart the columns on the row. At this point, the extra spacing needed to be removed. 
 
-**Expected: The nav links should collapse into the hamburger menu at a particular breakpoint in order to prevent the nav links from leaning against the navbar brand link. The nav links collapse down from under the main brand link, so that the user can easily associate the website name with the content. The links are clearly visible with nice contrasting between the navbar background and the nav links.**
+**Expected:**
+- The call to action button on the home page should be resize accordingly when the mobile and tablet screen breakpoint has been triggered.
 
-Tests Conducted - 
-
-**Testing result**
-- The collapse menu triggers at the wrong breakpoint, therefore making the links close in together at the medium breakpoint, and only triggers at 320px screen size.
-- The white background of the navbar is not so nicely contrasted with the color of the nav links
-- The nav links drop down from under the navabar brand link, but its stretched to the full width of its container #navbarSupportedContent, making the active class apply the border to the full width. This display is not desirable.
-**Fixes**
-- The nav element of all pages had a class of .navbar-expand-sm. This was the wrong class, making it trigger the navbar hamburger menu only at the small screen(320px) size. This has been changed to .navbar-expand-md to collapse at the 768px breakpoint.
-- Width of the nav links have been reduced by setting the property and value width:fit-content. Background color of aliceblue has been applied to the #navbarSupportedContent container to contrast the nav links better for viewability.
-
-**Expected: The call to action button on the home page should be resize accordingly when the mobile and tablet screen breakpoint has been triggered**
 **Testing result**
 - Button is same size as it is in the other breakpoints for larger screens. 
+
 **fix**
 - The font size of the button has been reduced to 20px to better fit the small viewport of mobile devices. The font size compliments readability due to the font family being applied globally.
 
-**Expected: The footer links are positioned properly, centered on the middle of the footer. On mobile breakpoint, three main footer links deemed neccessary for the user are visible. On screen sizes bigger than 768px, the sign up link is displayed. The footer links all open their respective relevant links, such as, home opens home page, about opens about page, and so on.**
+**Expected:**
+- The footer links are positioned properly, centered on the middle of the footer. On mobile breakpoint, three main footer links deemed neccessary for the user are visible. 
+- On screen sizes bigger than 768px, the sign up link is displayed, and on screen sizes smaller, the sign up link is hidden to accommodate the nav items properly on the footer. 
+- The footer links all open their respective relevant links, such as, home opens home page, about opens about page, and so on.
 
 **Test conducted**
 - Click all the links and verify whether the link navigates to the proper corresponding page.
@@ -160,6 +180,8 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 - The text for the a tag of the sign up page was missing from the tag on the footer across all pages. The text has been added to all the tags of the respective link. This was probably erased while ammending the href attributes of the links.
 
 - The .col-md-6 and .col-lg-4 classes had a display:flex and justify-content: center property applied to them globally in order for the bootstrap cards on the soundbook page to be centered. But doing so also affected the columns on the home page that has the same class. This caused the content of the row to appear scrambled, as the row in the home page was not originally meant to be flexed. The issue was mitigated by adding a custom class of on the div with the column classes, and then changing the class selector in the stylesheet to the new custom class.
+
+- An extra style declaration for the body was found to apply global font size to the body. There is already a main declaration for the body styles, which makes two declarations for the body. This font size property for the duplicate body style declaration has been moved to the main body style declaration and the duplicate declaration below it has been removed.
 
 ## Deployment and live project viewing ##
 

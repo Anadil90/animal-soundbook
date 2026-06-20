@@ -6,6 +6,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: #F1C40F;
+    font-size: 1.8rem;
 }
 
 /*navbar, nav links*/
@@ -23,10 +24,6 @@ body,
     font-family: "caveat", sans-serif;
 }
 
-body {
-    font-size: 1.8rem;
-}
-
 .navbar-brand {
     /*center on the vertical axis and move the brand link to the right by 40px*/
     margin-left: 40px;
@@ -40,7 +37,7 @@ body {
     justify-content: end;
 }
 
-.nav-item>.nav-link {
+.nav-item> .nav-link {
     /*reduce spacing within and apply spacing around the horizontal axis of the element*/
     padding: 0;
     margin: 0 10px;
@@ -314,7 +311,7 @@ input[type=text]:invalid {
 }
 
 @media screen and (max-width: 575px) {
-    .animal-tile-row {
+    .animal-tile-row {/*retain the original border edges on mobile devices up till the maximum width of 575px*/
         border-radius: 0;
     }
 }
@@ -339,7 +336,7 @@ input[type=text]:invalid {
         row-gap: 5px;
     }
 
-    .nav-item {
+    .nav-item {/*fit the nav items inside the nav element*/
         width: fit-content;
     }
 
@@ -353,7 +350,7 @@ input[type=text]:invalid {
         font-size: 20px;
     }
 
-    .hide {
+    .hide {/*hide the signup link on the footer on screen breakpoints of 768px and under*/
         display: none;
     }
 
@@ -365,7 +362,7 @@ input[type=text]:invalid {
 
     /*media query declaration for the soundbook page*/
     .hide-content {
-        /*style the text of span with class hide for better viweability on mobile screens*/
+        /*style the text of span to hide part of audio controls for better viweability on mobile screens*/
         font-size: 23px;
         font-weight: 600;
     }
