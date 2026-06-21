@@ -190,6 +190,16 @@ button[type=submit] {
     font-size: 1.5rem; /*default for small screen sizes*/
 }
 
+/*form styling for contact and signup forms*/
+.custom-button {/*apply styles to form buttons on contact page and sign up page*/
+    padding: 0 8px; /*custom dimensions for button*/
+    font-size: 1.6rem; /*default font size for buttons on both contact and sign up pages*/
+}
+
+.col-lg-4, .col-12 {/*apply font size to form labels and inputs for both contact and sign up forms as a group*/
+    font-size: 1.4rem;
+}
+
 /*soundbook page styles*/
 audio {
     width: 100px;
@@ -379,6 +389,9 @@ input[type=text]:invalid {
         width: fit-content;/*readjust card width to fit content within border in screens of 320px width*/
     }
 
-    
+    /*media query declaration for the contact and sign up pages*/
+    .custom-button {/*resize button for mobile and tablet screens*/
+        font-size: 1.3rem;
+    } 
 
 }

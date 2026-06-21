@@ -169,7 +169,7 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 
 ## Further fixes
 
-- Many redundant styles, inlcuding media queries, were found on the main stylesheet. The styles had minimal, or no effect on the elements, or were duplications of media queries that could have been consolidated into one single media query line. These styles were removed
+- Many redundant styles, inlcuding media queries, were found on the main stylesheet. The styles had minimal, or no effect on the elements, or were duplications of media queries that could have been consolidated into one single media query line. These styles were removed.
 
 - The animal tile grid section section overflows on top of the navbar on the page to play the animal sounds. Setting a z-index property to the value of 3 solved the issue. Furthermore, this property was also found to be placed at the media query breakpoint of 992px for both the #main and .navbar element, when it was not required to be there at all. The property was moved to the .navbar style declaration as a global declaration for all the pages. There is absolutely no need for a media query declaration just to do this.
 
@@ -188,6 +188,8 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 - An extra style declaration for the body was found to apply global font size to the body. There is already a main declaration for the body styles, which makes two declarations for the body. This font size property for the duplicate body style declaration has been moved to the main body style declaration and the duplicate declaration below it has been removed.
 
 - The font size of the about paragraph in the about page is the same size globally, as well as on the media query breakpoint of between 320px and 768px for mobile and tablet devices. This is a improper style application, and is causing the about paragraph to be too small on medium sized devices and devices with larger screens. The global font size for the about paragraph has been changed to 1.5rem for better viewability. The font size now scales from larger to smaller, which is the desired output.
+
+- The font sizes of the labels, inputs, and buttons for the forms on both the contact and sign up pages are oversized. This worsens the look and feel of the form. It was found that there was no default specified font size for the labels, inputs and the form buttons. This means that the global font size of 1.8rem was applied to the elements on both pages, that made them look oversized. The labels and inputs of the forms has been targeted by their column classes and a font size of 1.4rem has been applied to those elements on both pages to rectify the issue. The buttons have been seperately targeted by the .custom-button class and resized with custom dimensions to compliment the look of the form. 
 
 ## Deployment and live project viewing ##
 
