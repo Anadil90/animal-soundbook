@@ -167,7 +167,7 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 - The container class was used in the section element. Upon googling the issue, it was found out that it is not the best practice to apply the container class on a section, but to rather nest a div inside the section and apply the container class on it. Removing the container class from the section itself proved to be fruitful, as the grid right then displayed properly, placed along the center of the body. Placing the row inside of the container made the grid display exactly as the way it was meant to be displayed, clean with spacing. 
 
 
-## Further fixes
+## Further problems and fixes
 
 - Many redundant styles, inlcuding media queries, were found on the main stylesheet. The styles had minimal, or no effect on the elements, or were duplications of media queries that could have been consolidated into one single media query line. These styles were removed.
 
@@ -190,6 +190,12 @@ The testing made it clear that the bootstrap grid was spilling its' content out 
 - The font size of the about paragraph in the about page is the same size globally, as well as on the media query breakpoint of between 320px and 768px for mobile and tablet devices. This is a improper style application, and is causing the about paragraph to be too small on medium sized devices and devices with larger screens. The global font size for the about paragraph has been changed to 1.5rem for better viewability. The font size now scales from larger to smaller, which is the desired output.
 
 - The font sizes of the labels, inputs, and buttons for the forms on both the contact and sign up pages are oversized. This worsens the look and feel of the form. It was found that there was no default specified font size for the labels, inputs and the form buttons. This means that the global font size of 1.8rem was applied to the elements on both pages, that made them look oversized. The labels and inputs of the forms has been targeted by their column classes and a font size of 1.4rem has been applied to those elements on both pages to rectify the issue. The buttons have been seperately targeted by the .custom-button class and resized with custom dimensions to compliment the look of the form. 
+
+- The required attribute for the password input element on the sign up form was present, but the validation was not being carried out for it. The form validation for this field and the user feedback styles therefore were not being applied. The missing attribute has been placed on to the input element for the password once more. The styles to show the user feedback for the password field was also missing. The style declaration and properties for the user feedback has been placed at the stylesheet to show user feedback for empty field or text lower than 8 characters. 
+
+- The sign up information text for the user below the sign up form was too big. It was found that the text was contained inside an h1 paragraph heading. This is not appropiate for the use case as the proper practice would be to put the text in a paragraph element and then size the text acordingly. The issue has been rectified by changing the h1 heading to a paragraph with the id signup-text, in order to select and apply a font size of 1.4rem for mobile, and 1.6rem for screens larger than 768px. Again, here the global font was kicking in, making the text oversized.
+
+- The sign up text should be on top of the form element. In terms of information hierarchy, it seems wrong, or simply counteractive for the text to be below the sign up button. The user is supposed to read the text first and then begin filling up the form, not the opposite! The paragraph has been placed on the top of the form to improve user interaction.
 
 ## Deployment and live project viewing ##
 

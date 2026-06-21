@@ -247,14 +247,6 @@ input[type=text]:valid {
     background-color: aquamarine;
 }
 
-#email:valid {
-    background-color: aquamarine;
-}
-
-#message:valid {
-    background-color: aquamarine;
-}
-
 input[type=text]:invalid {
     border: 2px solid red;
 }
@@ -263,8 +255,28 @@ input[type=text]:invalid {
     border: 2px solid red;
 }
 
+#email:valid {
+    background-color: aquamarine;
+}
+
+#password:invalid {
+    border: 2px solid red;
+}
+
+#password:valid {
+    background-color: aquamarine;
+}
+
 #message:invalid {
     border: 2px solid red;
+}
+
+#message:valid {
+    background-color: aquamarine;
+}
+
+#signup-text {
+    font-size: 1.6rem;
 }
 
 /*media queries to fix layout issues*/
@@ -393,5 +405,9 @@ input[type=text]:invalid {
     .custom-button {/*resize button for mobile and tablet screens*/
         font-size: 1.3rem;
     } 
+
+    #signup-text {
+        font-size: 1.2rem;
+    }
 
 }
