@@ -119,19 +119,18 @@ footer {
     /*background color for a smoother touch to the content and better visibility.*/
     background-color: #ffa9;
     padding: 30px 10px;
-    row-gap: 30px;
+    row-gap: 20px;
 }
 
 .card {
-    width: 19rem;/*card width matches the content width*/
-    height: 19rem;
+    width: 22rem;
+    height: 18rem;
 }
 
 .card .card-img-top {
-    min-height: 8em;
-    min-width: 7em;
-    max-height: 11.5em;
     object-fit: fill;/*fill the image container*/
+    width: 100%;
+    min-height: 14rem;
 }
 
 .card-title {
@@ -323,9 +322,6 @@ input[type=text]:invalid {
 
 /*media queries for the soundbook page*/
 @media screen and (min-width:992px) {/*media queries for screens of 992px and higher*/
-    .card .card-img-top {
-        min-height: 8em;
-    }
 
     .hide-content {
         font-size: 25px;
@@ -393,12 +389,8 @@ input[type=text]:invalid {
 
     /*fix card layout in mobile screens*/
     .card-img-top {/*resize card dimensions to fit inside row in mobile devices*/
-        width: 9.3em;
-        height: 9.5em;
-    }
-
-    .card {
-        width: fit-content;/*readjust card width to fit content within border in screens of 320px width*/
+        width: 9.8em;
+        height: 9.2em;
     }
 
     /*media query declaration for the contact and sign up pages*/

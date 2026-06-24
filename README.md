@@ -160,11 +160,14 @@ The about paragraph was found to be squashed in from top to bottom. Upon reviewi
 - Inspect the individual breakpoints for mobile, tablet, laptop and desktop screens with the dev tools of the browser to assure that the content of the grid is resized properly, in addition to ensuring that the grid is properly spaced and aligned along the body.
 
 **Testing result**
-The testing made it clear that the bootstrap grid was spilling its' content out of the container. Upon viewing the soundbook page, the entire container seemed to be out of place, as if it was forced to be positioned out of the normal position flow. Attempting to increase the width of the container resulted in it actually shrinking the content. It was clear there was a mess up either in the bootstrap grid, or the main container. 
+- The initial testing made it clear that the bootstrap grid was spilling its' content out of the container. Upon viewing the soundbook page, the entire container seemed to be out of place, as if it was forced to be positioned out of the normal position flow. Attempting to increase the width of the container resulted in it actually shrinking the content. It was clear there was a mess up either in the bootstrap grid, or the main container. 
+- Upon checking the invidual breakpoints of 320px, 375px, 425px, and 768px, it became clear that the card images are of the improper width compared to the height on these particular breakpoints. 
 
 **Fixes** 
 - Upon inspection, it was found that there was an extra div in the bootstrap row that caused the bootstrap grid to break and display the cards properly. The div was removed and that resulted the grid containing the cards within the row, and not spilling out of it.
 - The container class was used in the section element. Upon googling the issue, it was found out that it is not the best practice to apply the container class on a section, but to rather nest a div inside the section and apply the container class on it. Removing the container class from the section itself proved to be fruitful, as the grid right then displayed properly, placed along the center of the body. Placing the row inside of the container made the grid display exactly as the way it was meant to be displayed, clean with spacing. 
+
+- A media query declaration is being used to apply a width of 9.3em, and height of 9.5em to the card image. This is resulting in the bootstrap cards being too tall in appearance. The width:height ratio therefore is not correct. It has been further found out that the .card style declaration on the media query breakpoint of between 320px and 768px was applying a width:fit-content property to the card. This unneccessary declaration was causing the issue of the card images not scaling properly. The global width and height properties of the .card class declared in the generic styles of the stylesheet suffices to size the cards accordingly. The unneccessary style declaration was removed from the media query breakpoint of between 320px and 768px to circumvent the issue.
 
 
 ## Further problems and fixes
