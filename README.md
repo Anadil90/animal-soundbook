@@ -286,6 +286,9 @@ The wireframe showed here initially was the designed being opted for. Thw wirefr
 ## known issues
 The sounds of the animals play synchronous to each other. This means that when one anial sound is played, another can also be played at the same time. There is nothing much that can be done about this behavior at this stage of the development of the website, as mitigating the issue means resorting to javascript, which is out of the project scope. This issue however, will be resolved in the future release of the website, along with the other desired features being implemented. As the core functionality of the website is delivered, this issue can be considered to be minor at this point.
 
+## Feature improvements and additions ##
+- The intitial number of animals was found to be too little in terms of animal choices. An ongoing attempt to create a rich collection of animals for the soundbook has been initiated. As of this writing, 7 more animals have been added to the animal tile grid.  
+
 ## Desired features of the website for the future ##
 While this initial version of the website gives a taste of what can the users be offered, there remains room for some features that would be desirable, which are outlined below:
 - sections for multiple categories of objects for children to learn, such as vehicles, fruits, vegetables, food items, etc. This idea stems from a childrens flip soundbook by Vtech. 
