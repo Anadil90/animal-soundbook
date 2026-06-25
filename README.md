@@ -288,6 +288,7 @@ The sounds of the animals play synchronous to each other. This means that when o
 
 ## Feature improvements and additions ##
 - The intitial number of animals was found to be too little in terms of animal choices. An ongoing attempt to create a rich collection of animals for the soundbook has been initiated. As of this writing, 7 more animals have been added to the animal tile grid.  
+- 8 more animals have been added to the animal tile grid, bringing the total number of animals to 27.
 
 ## Desired features of the website for the future ##
 While this initial version of the website gives a taste of what can the users be offered, there remains room for some features that would be desirable, which are outlined below:
