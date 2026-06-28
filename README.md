@@ -1,12 +1,12 @@
-# animal-soundbook
+### animal-soundbook ###
 
 Animal soundbook is a simple website that serves as a visual cue learning aid for children. The website was designed with the intention to make learning animal names and animal sounds a little bit more enjoyable and fun. The app will also serve as an experiment to gauge the interest of children in learning.  
 
-# Features 
+### Features ###
 
 The website features a board in a grid that contains images of animals, along with a fun text that defines the sound that the animal makes. At the bottom of the animal card, is a button to play the sound of the animal, so that kids can have an audio feedback to add to the learning experience. The typography of the website is reflected to be more subtle, yet playful, aimed towards children as the main audience. 
 
-# Primary business goals of the website
+### Primary business goals of the website ###
 
 Animal sounbook is not trying to reinvent the wheel, rather the goal is to take something that exists mainly in static form, and give it an interactive touch that is a bit more interesting than paper books. The website aims to draw in two groups of audiences:
 1. Parents of children
@@ -14,20 +14,20 @@ Animal sounbook is not trying to reinvent the wheel, rather the goal is to take 
 
 The home page serves as the primary point of the call to action, where engaging text attempts to draw in the audience to the call-to-action, which is clicking the play me! button and landing on the page where the users see the animal card grid. Drawing the interest of parents mean a likehood of the website being used for their children. When children tend to use the website on a considerable scale, the primary goal of the website has been considered to be fullfilled.
 
-## As users, the following would be expected upon visiting the website:
+### As users, the following would be expected upon visiting the website: ###
 - I see a pleasant layout with nice contrasting colors.
 - I am able to easily find out with a short glance what the webiste is about, and what it can offer.
 - Clicking on the let's play button will lead to exactly, or closely what has been described on the home page.
 
 
-## Typography choices
+### Typography choices ###
 Upon research, I have found that children are attracted towards bright colours like red, orange and yellow, which utlimately increases a child's attention to detail. Based on this I have decided to go with a sort of a sunburst color #FFD34E for the background of the Bootstrap cards. This color, I feel, contrasts nicely with the color of #FFF2D9, which is basically a cream white color. For the background color of the body, the color #F1C40F has been chosen. For the border of the cards, the color #6CB4EE has been applied for a subtle contrast between the background and the cards, giving a more tactile look to the cards. For the header the color burlywood has been utlized to serve as an element of seperation from the background. The blackfonts are easy to read with this color for header background.
 
 I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes with Hex Codes & AI Design Examples] (https://www.media.io/color-palette/kids-color-palette.html)
 
 
 
-## Manual testing
+### Manual testing ###
 
 **Expected Behaviour:** 
 - The page that displays the bootstrap grid with animal tiles should be responsive and have images that scale properly. 
@@ -51,7 +51,7 @@ I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes w
 - The navbar should have nav links that are centered and positioned in the right place, as expected of most websites that users come across. Users are used to the main nav links used to navigate websites on the right side, and the main home link with the logo or wesbite brand to be on the left side, and spaced properly against the left. 
 - The navbar should be responsive with font sizes resizing according to the screen width, and collapse on mobile screen sizes in order to allow users to see the nav links by clicking on the burger menu. 
 - The nav links collapse down from under the main brand link, so that the user can easily associate the website name with the content. The links are clearly visible with nice contrasting between the navbar background and the nav links. 
-- All nav links appear on the navbar accross all pages.**
+- All nav links appear on the navbar accross all pages.
 
 **Tests conducted:** 
 - Inspect the navbar element with dev tools of the web browser to determine the position and spacing of the nav links.
@@ -141,7 +141,6 @@ I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes w
 - The href attribute of the footer links have been corrected to navigate to the proper links when the user clicks on them.
 - The href attributes of the footer links all had absolute paths to the html documents. This is wrong, and can cause conflicts with page navigation on the deployed site. This has been rectified by ammending the href attribute to point to the relative paths of the documents.
 
-
 **Expected: The description column on the about page should be readable on all screen widths and be sized accordingly with respect to the screen breakpoints**
 
 **Testing result:**
@@ -168,7 +167,7 @@ The about paragraph was found to be squashed in from top to bottom. Upon reviewi
 - A media query declaration is being used to apply a width of 9.3em, and height of 9.5em to the card image. This is resulting in the bootstrap cards being too tall in appearance. The width:height ratio therefore is not correct. It has been further found out that the .card style declaration on the media query breakpoint of between 320px and 768px was applying a width:fit-content property to the card. This unneccessary declaration was causing the issue of the card images not scaling properly. The global width and height properties of the .card class declared in the generic styles of the stylesheet suffices to size the cards accordingly. The unneccessary style declaration was removed from the media query breakpoint of between 320px and 768px to circumvent the issue.
 
 
-## Further problems and fixes
+### Further problems and fixes ###
 
 - Many redundant styles, inlcuding media queries, were found on the main stylesheet. The styles had minimal, or no effect on the elements, or were duplications of media queries that could have been consolidated into one single media query line. These styles were removed.
 
@@ -250,7 +249,7 @@ Upo doing so, you will also need to navigate to the newly created project direct
 The following source has been referenced to outline the steps above for the cloning process: [Contributing to Open Source: A Step-by-Step Guide to Forking, Cloning, and Creating a Pull Request on GitHub] (https://medium.com/@jainsambhav0704/contributing-to-open-source-a-step-by-step-guide-to-forking-cloning-and-creating-a-pull-request-d0780d76f8cd)
 
 
-## User stories
+### User stories ###
 
 ![user story 1](./user_stories/user-story1.png.png)
 As a user of the website for the first time, I expect the webiste to be easily navigable and for it to be responsive across all devices. The information I am looking for should be quickly found without any frustations. 
@@ -271,13 +270,13 @@ When I go to the website, it is easy for the eyes on me, I can see the text clea
 
 The user story was met with typography to grab the attention of young children, through research into what colors primarily attracts them and helps them to concentrate. This is actually still an ongoing research on part of the developer to finely pinpoint the relation of typography choices with the efficacy of learning in children.
 
-## Automatic testing
+### Automatic testing ###
 
 HTML validation: 
 
 testing the pages showed that they were mostly clean, except for warning messages on the contact and signup pages.
 
-### home page
+### home page ###
 ![home page test](./testing/html-validator-test-home-page.png.png)
 
 ![about page test](./testing/html-validator-test-about-page.png.png)
@@ -286,24 +285,24 @@ testing the pages showed that they were mostly clean, except for warning message
 
 ![signup page test](./testing/html-validator-test-signup-page.png.png)
 
-## Lighthouse testing
+### Lighthouse testing ###
 
 ![lighthouse test](./Lighthouse%20testing/lighthouse-testing-result.png)
 The test revealed that a few things can be done to improve page load speed, but on the accessibility side, it seems to fare good.
 
-## wireframes
+### wireframes ###
 
 The wireframe showed here initially was the designed being opted for. Thw wireframe helped to draw out the rough sketch in terms of what the website can look like. It was drawn by hand on a magnetic ink sketch board and then adopted on paper. 
 ![wireframe](./wireframe/wireframe-sketch.jpeg)
 
-## known issues
+### known issues ###
 The sounds of the animals play synchronous to each other. This means that when one anial sound is played, another can also be played at the same time. There is nothing much that can be done about this behavior at this stage of the development of the website, as mitigating the issue means resorting to javascript, which is out of the project scope. This issue however, will be resolved in the future release of the website, along with the other desired features being implemented. As the core functionality of the website is delivered, this issue can be considered to be minor at this point.
 
-## Feature improvements and additions ##
+### Feature improvements and additions ###
 - The intitial number of animals was found to be too little in terms of animal choices. An ongoing attempt to create a rich collection of animals for the soundbook has been initiated. As of this writing, 7 more animals have been added to the animal tile grid.  
 - 8 more animals have been added to the animal tile grid, bringing the total number of animals to 27.
 
-## Desired features of the website for the future ##
+### Desired features of the website for the future ###
 While this initial version of the website gives a taste of what can the users be offered, there remains room for some features that would be desirable, which are outlined below:
 - sections for multiple categories of objects for children to learn, such as vehicles, fruits, vegetables, food items, etc. This idea stems from a childrens flip soundbook by Vtech. 
 - A short video clip of the animal belonging to an animal tile is played when the user hovers over the animal tile. This feature requires selecting the card-img-top of the bootstrap cards in the DOM and then placing a video element on top of the card image for that paricular event.
