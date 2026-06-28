@@ -37,7 +37,7 @@ body,
     justify-content: end;
 }
 
-.nav-item> .nav-link {
+.nav-item > .nav-link {
     /*reduce spacing within and apply spacing around the horizontal axis of the element*/
     padding: 0;
     margin: 0 10px;
