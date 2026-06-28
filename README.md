@@ -47,7 +47,7 @@ I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes w
 - An audio element has been nested inside the h3 heading of the card body in the bootstrap card. The audio element was resized to fit inside the h3, and will serve as the means to play the sound of the animal in the animal tile grid. It was attempted to play the sounds with a small javascript snippet, but that proved to be out of the scope of the project due to the complexity of getting the script to play all the sounds of the animal, instead of just one. For this reason, the script snippet was removed from the bottom of the body, and the audio element was implemented in its place. The audio elements does the job nicely, and was not too difficult to set up. 
 - The controls of the audio element has been hidden with a span nested inside the bootstrap card title, and changing the background color of the span to the background of the audio element, which is whitesmoke.
 
-**Expected:**
+**Expected behaviour:**
 - The navbar should have nav links that are centered and positioned in the right place, as expected of most websites that users come across. Users are used to the main nav links used to navigate websites on the right side, and the main home link with the logo or wesbite brand to be on the left side, and spaced properly against the left. 
 - The navbar should be responsive with font sizes resizing according to the screen width, and collapse on mobile screen sizes in order to allow users to see the nav links by clicking on the burger menu. 
 - The nav links collapse down from under the main brand link, so that the user can easily associate the website name with the content. The links are clearly visible with nice contrasting between the navbar background and the nav links. 
@@ -85,7 +85,7 @@ I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes w
    
 - The cdn link to bootstrap has been changed to bootstrap 5.3.8 to solve the issue of the navbar hamburger button not triggering the dropdown for the nav links on mobile screen sizes. The button now successfully triggers the drop down menu and shows the nav links.
 
-**Expected:** 
+**Expected behaviour:** 
 - The images and text on the home page should resize and fit in their columns fluidly, so as to represent responsive design. This should be according to the respective breakpoints across various devices. 
 - The images should have an aspect ratio similar or close to that of each other, so that they are able to be resized nicely.**
 
@@ -110,7 +110,7 @@ I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes w
 - On the breakpoint between 768 and 992px, the columns has been placed accordingly to line with the text by using the align-content property. On the fourth column, which is the column for the description text of the second image a margin of 90px has been added to push down the description text to be level with the image.  
 - A margin of 20px to the top of both the description columns for the images on the home page has been removed from the .description-column style declaration. It is not applicable anymore, as the property row-gap does the work of spacing apart the columns on the row. At this point, the extra spacing needed to be removed. 
 
-**Expected:**
+**Expected behaviour:**
 - The call to action button on the home page should be resize accordingly when the mobile and tablet screen breakpoint has been triggered.
 
 **Test conducted:**
@@ -122,7 +122,7 @@ I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes w
 **Fixes:**
 - The font size of the button has been reduced to 20px to better fit the small viewport of mobile devices and medium screen size devices, such as tablets. The font size compliments readability due to the font family being applied globally. On screen sizes larger than 768px, and screens of up to maximum of 992px, the font size of 23px has been applied to the cta button, as it compliments the sizing of the text content in the page. The default font size of 27px is applied on breakpoints larger than 992px, due to the media query specified up to a maximum of 992px. 
 
-**Expected:**
+**Expected behaviour:**
 - The footer links are positioned properly, centered on the middle of the footer. On mobile breakpoint, three main footer links deemed neccessary for the user are visible. 
 - On screen sizes bigger than 768px, the sign up link is displayed, and on screen sizes smaller, the sign up link is hidden to accommodate the nav items properly on the footer. 
 - The footer links all open their respective relevant links, such as, home opens home page, about opens about page, and so on.
@@ -141,7 +141,8 @@ I have sourced the color hex codes from here: [The 20 Best Kids Color Palettes w
 - The href attribute of the footer links have been corrected to navigate to the proper links when the user clicks on them.
 - The href attributes of the footer links all had absolute paths to the html documents. This is wrong, and can cause conflicts with page navigation on the deployed site. This has been rectified by ammending the href attribute to point to the relative paths of the documents.
 
-**Expected: The description column on the about page should be readable on all screen widths and be sized accordingly with respect to the screen breakpoints**
+**Expected behaviour:** 
+- The description column on the about page should be readable on all screen widths and be sized accordingly with respect to the screen breakpoints**
 
 **Testing result:**
 The about paragraph was found to be squashed in from top to bottom. Upon reviewing the page structure, it was found that the paragraph was contained in column of 6 units, which is not neccessary. An inline style was found applying margin to the top of the section. 
@@ -150,7 +151,9 @@ The about paragraph was found to be squashed in from top to bottom. Upon reviewi
 - The bootstrap column was unneccessarily divided into two columns, where it seemed evident that perhaps the second column was not meant to have any content. The column class was changed to .col-lg-12  from col-6 to take up the full width of a single column. As it is a description paragraph, one column is more suited to it. The column is now responsive, making it easier to read the text content. 
 - An inline style applying margin to the top was moved to the main stylesheet, as there is no need to explicitly enforce higher specificity just to apply this style.
 
-**Expected: The section with the Animal tile grid is responsive and contains the animal tiles within it without spilling over the boundaries of the section. The grid is centered and contains tiles of the appropriate dimensions in terms of height and width.**
+**Expected behaviour:**
+- The section with the Animal tile grid is responsive and contains the animal tiles within it without spilling over the boundaries of the section. 
+- The grid is centered and contains tiles of the appropriate dimensions in terms of height and width.
 
 **Test conducted:**
 - Resize the browser window and determine whether the bootstrap grid has a proper layout, in terms of the tiles displaying according to the column classes being applied, as well as responsively resizing according to the screen width. 
@@ -251,7 +254,7 @@ The following source has been referenced to outline the steps above for the clon
 
 ### User stories ###
 
-![user story 1](./user_stories/user-story1.png.png)
+![user story 1](./user_stories/user-story1.png)
 As a user of the website for the first time, I expect the webiste to be easily navigable and for it to be responsive across all devices. The information I am looking for should be quickly found without any frustations. 
 
 The user story has been met by implementing a simple easy to follow navigation heirarchy, as well as applying proper styling and media queries for the responsiveness of the website accross most common and  major breakpoints.  
@@ -277,13 +280,13 @@ HTML validation:
 testing the pages showed that they were mostly clean, except for warning messages on the contact and signup pages.
 
 ### home page ###
-![home page test](./testing/html-validator-test-home-page.png.png)
+![home page test](./testing/html-validator-test-home-page.png)
 
-![about page test](./testing/html-validator-test-about-page.png.png)
+![about page test](./testing/html-validator-test-about-page.png)
 
-![contact page test](./testing/html-validator-test-contact-page.png.png)
+![contact page test](./testing/html-validator-test-contact-page.png)
 
-![signup page test](./testing/html-validator-test-signup-page.png.png)
+![signup page test](./testing/html-validator-test-signup-page.png)
 
 ### Lighthouse testing ###
 
